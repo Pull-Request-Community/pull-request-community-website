@@ -16,7 +16,7 @@ You can add / update your personal profile by creating a Pull Request to this re
 
 ### In the cloud
 
-Coming soon...
+Open the project in [https://githubbox.com/urish/pull-request-community](CodeSandbox) to start hacking in your browser.
 
 ### Locally
 
