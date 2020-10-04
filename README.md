@@ -4,8 +4,8 @@
 
 You can add / update your personal profile by creating a Pull Request to this repo:
 
-1. Create a new JSON file in the [people](people/) directory, and name it as your GitHub username.  
-   e.g. If you GitHub user is MichalPorag, `MichalPorag.json`.
+1. Create a new YAML file in the [people](people/) directory, and name it as your GitHub username.  
+   e.g. If you GitHub user is MichalPorag, `MichalPorag.yaml`.
 
 2. Add your photo under [public/images/people](public/images/people) in jpeg format. Use your GitHub 
    username for the image, e.g. `MichalPorag.jpg`
