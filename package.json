@@ -28,7 +28,11 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
+    "people/*.{json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{ts,tsx,md}": [
       "prettier --write",
       "git add"
     ]
