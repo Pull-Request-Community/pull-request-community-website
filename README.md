@@ -7,10 +7,29 @@ You can add / update your personal profile by creating a Pull Request to this re
 1. Create a new JSON file in the [people](people/) directory, and name it as your GitHub username.  
    e.g. If you GitHub user is MichalPorag, `MichalPorag.json`.
 
-2. Add your photo under [public/images/people](public/images/people) in jpeg format. Use your GitHub 
-   username for the image, e.g. `MichalPorag.jpg`
+   The JSON file should look something like:
 
-3. Create a pull request with the changes
+   ```json
+   {
+     "name": "השם שלך",
+     "github": "Your GitHub Username (not link, just the username",
+     "facebook": "Link to your Facebook Profile (optional)",
+     "twitter": "Link to your Twitter Profile (optional)",
+     "linkedin": "Link to your LinkedIn page (optional)",
+     "website": "Link to your personal blog / website     (optional)",
+     "description": "פסקה או שתיים על עצמך: רקע מקצועי, עבודה, תחביבים ומה שחשוב לך שהחברים בקבוצה ידעו"
+   }
+   ```
+
+   The `name`, `github`, and `description` fields are required. All the other fields are optional.
+
+2. By default, we'll use your GitHub photo. If you don't have a GitHub profile photo,
+   or want to use a different one, add it under [public/images/people](public/images/people) in jpeg format.
+   Use your GitHub username for the image, e.g. `MichalPorag.jpg`.
+
+   Then, add `"customImage": true` to your profile JSON that you created in the previous step.
+
+3. Create a pull request with new files.
 
 ## Running a development environment
 
@@ -33,4 +52,3 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
