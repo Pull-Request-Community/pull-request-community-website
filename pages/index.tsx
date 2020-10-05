@@ -1,3 +1,5 @@
+import { mdiGithub } from '@mdi/js';
+import Icon from '@mdi/react';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { PersonCard } from '../components/person-card';
@@ -20,6 +22,15 @@ export default function Home({ people }: IHomeProps) {
         <h1 className={styles.title}>
           קהילת <a href="http://facebook.com/groups/pullrequest">Pull Request</a>
         </h1>
+
+        <a
+          href="https://github.com/urish/pull-request-community#adding-your-profile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.githubButton}
+        >
+          <Icon path={mdiGithub} size={1} /> הוסיפו את עצמכם
+        </a>
 
         {people.map((person) => (
           <PersonCard key={person.github} person={person} />
