@@ -1,6 +1,7 @@
 import { mdiFacebook, mdiGithub, mdiLinkedin, mdiTwitter, mdiWeb } from '@mdi/js';
 import Icon from '@mdi/react';
 import { IPerson } from '../services/people';
+import styles from './person-card.module.css';
 
 interface IPersonProps {
   person: IPerson;
@@ -10,7 +11,7 @@ export function PersonCard({ person }: IPersonProps) {
   return (
     <article>
       <h2>{person.name}</h2>
-      <img src={`https://github.com/${person.github}.png?size=200`} />
+      <img src={`https://github.com/${person.github}.png?size=200`} className={styles.avatar} />
       <p>{person.description}</p>
       <a href={`https://github.com/${person.github}`} target="_blank" rel="noopener noreferrer">
         <Icon path={mdiGithub} size={1.5} />
