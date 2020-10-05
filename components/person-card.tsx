@@ -9,7 +9,7 @@ interface IPersonProps {
 
 export function PersonCard({ person }: IPersonProps) {
   return (
-    <article>
+    <article id={`profile-${person.github}`}>
       <h2>{person.name}</h2>
       <img src={`https://github.com/${person.github}.png?size=200`} className={styles.avatar} />
       <p>{person.description}</p>
