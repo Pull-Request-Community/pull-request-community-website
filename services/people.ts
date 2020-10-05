@@ -4,6 +4,8 @@ export interface IPerson {
   description: string;
   twitter?: string;
   facebook?: string;
+  website?: string;
+  linkedin?: string;
 }
 
 export function getPeople() {

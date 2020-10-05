@@ -1,4 +1,4 @@
-import { mdiFacebook, mdiGithub, mdiTwitter } from '@mdi/js';
+import { mdiFacebook, mdiGithub, mdiLinkedin, mdiTwitter, mdiWeb } from '@mdi/js';
 import Icon from '@mdi/react';
 import { IPerson } from '../services/people';
 
@@ -18,6 +18,16 @@ export function PersonCard({ person }: IPersonProps) {
       {person.twitter && (
         <a href={person.twitter} target="_blank" rel="noopener noreferrer">
           <Icon path={mdiTwitter} size={1.5} />
+        </a>
+      )}
+      {person.linkedin && (
+        <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
+          <Icon path={mdiLinkedin} size={1.5} />
+        </a>
+      )}
+      {person.website && (
+        <a href={person.website} target="_blank" rel="noopener noreferrer">
+          <Icon path={mdiWeb} size={1.5} />
         </a>
       )}
       {person.facebook && (
