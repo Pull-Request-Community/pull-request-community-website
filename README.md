@@ -14,11 +14,11 @@ You can add / update your personal profile by creating a Pull Request to this re
    ```json
    {
      "name": "השם שלך",
-     "github": "Your GitHub Username (not link, just the username",
+     "github": "Your GitHub Username (not link, just the username)",
      "facebook": "Link to your Facebook Profile (optional)",
      "twitter": "Link to your Twitter Profile (optional)",
      "linkedin": "Link to your LinkedIn page (optional)",
-     "website": "Link to your personal blog / website     (optional)",
+     "website": "Link to your personal blog / website (optional)",
      "description": "פסקה או שתיים על עצמך: רקע מקצועי, עבודה, תחביבים ומה שחשוב לך שהחברים בקבוצה ידעו"
    }
    ```
