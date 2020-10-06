@@ -2,6 +2,7 @@ import { mdiGithub } from '@mdi/js';
 import Icon from '@mdi/react';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { PersonCard } from '../components/person-card';
 import { getPeople, IPerson } from '../services/people';
 import styles from '../styles/Home.module.css';
@@ -11,6 +12,12 @@ interface IHomeProps {
 }
 
 export default function Home({ people }: IHomeProps) {
+  const router = useRouter();
+  const filter = new Set((router.query.f as string)?.split(','));
+
+  const fitleredPeople =
+    filter.size > 0 ? people.filter((person) => filter.has(person.github)) : people;
+
   return (
     <div className={styles.container}>
       <Head>
@@ -32,7 +39,7 @@ export default function Home({ people }: IHomeProps) {
           <Icon path={mdiGithub} size={1} /> הוסיפו את עצמכם
         </a>
 
-        {people.map((person) => (
+        {fitleredPeople.map((person) => (
           <PersonCard key={person.github} person={person} />
         ))}
       </main>
