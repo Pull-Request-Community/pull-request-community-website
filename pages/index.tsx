@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { PersonCard } from '../components/person-card';
 import { getPeople, IPerson } from '../services/people';
 import styles from '../styles/Home.module.css';
+import { randomShuffle } from '../utils/randomShuffle';
 
 interface IHomeProps {
   people: IPerson[];
@@ -50,7 +51,7 @@ export default function Home({ people }: IHomeProps) {
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
-      people: getPeople(),
+      people: randomShuffle(getPeople()),
     },
   };
 };
