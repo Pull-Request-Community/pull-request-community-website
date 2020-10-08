@@ -23,8 +23,12 @@ You can add / update your personal profile by creating a Pull Request to this re
    }
    ```
 
-   The `name`, `github`, and `description` fields are required and need to be in Hebrew.  
+   The `name`, `github`, and `description` fields are required and **need to be in Hebrew**.  
    All the other fields are optional.
+
+   Use the `description` field to introduce yourself: technologies that you love, hobbies, fun-facts,
+   and anything that you are passionate about. Are you an architect? Do you speak Chinese? Studied amusement park
+   and roller coaster engineering? This is the place to brag!
 
 2. By default, we'll use your GitHub photo. If you don't have a GitHub profile photo,
    or want to use a different one, add it under [public/images/people](public/images/people) in jpeg format.
