@@ -9,23 +9,24 @@
 First of all, please write in Hebrew. Share things that will help other people know what makes
 you unique: hobbies, talents, fun-facts, technologies that you love.
 
-Here are some examples of things that can fit well:
+Here are some good description example:
 
-✅ מדברת סינית שוטפת  
-✅ מתנדב במד"א  
-✅ חובבת מושבעת של בדיקות אוטומטיות וקוד מסודר  
-✅ אוהב לאפות עוגות וקינוחים  
-✅ לשעבר תלמיד ישיבה  
-✅ מנגנת בחליל פן  
-✅ גולש רוח וגלים וצולל בכל הזדמנות אפשרית  
-✅ מתנדבת בשיקודס
+<✅✅✅>
+
+מפתח Full-Stuck ב4 שנים האחרונות ואחד המנהלים בקהילה,
+אוהב מאד ללמוד ולפתח אפליקציות WEB ותמיד לעזור לאנשים בתחום בכל דרך שהיא.
+בזמני הפנוי אוהב לתופף, להקליט ולהופיע עם הלהקה שלי
+
+</✅✅✅>
 
 And these are examples of things that don't really add value, they may sound "smart" but when
 other people read it, it doesn't help them connect with you:
 
-🚫 אוהב לכתוב קוד ולרוץ, לא בהכרח בסדר הזה  
-🚫 It's okay password, I'm insecure too  
-🚫 מחליף תחביבים כל שבוע, מוזמנים לשאול אותי מה הפעם.
+<🚫🚫🚫>
+
+אוהב לקודד ולישון ...
+
+</🚫🚫🚫>
 
 ### The technical stuff
 
