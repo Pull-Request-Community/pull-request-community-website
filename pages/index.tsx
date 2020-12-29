@@ -14,7 +14,7 @@ export default function Home({ people }: IHomeProps) {
   const router = useRouter();
   const filter = new Set((router.query.f as string)?.split(','));
 
-  const fitleredPeople =
+  const filteredPeople =
     filter.size > 0 ? people.filter((person) => filter.has(person.github)) : people;
 
   return (
@@ -47,11 +47,11 @@ export default function Home({ people }: IHomeProps) {
             </a>
           </p>
         </section>
-        <section id="people">
-          {fitleredPeople.map((person) => (
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          {filteredPeople.map((person) => (
             <PersonCard key={person.github} person={person} />
           ))}
-        </section>
+        </div>
       </main>
     </div>
   );
