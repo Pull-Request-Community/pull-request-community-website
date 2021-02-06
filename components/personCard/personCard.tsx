@@ -2,7 +2,7 @@ import { useMemo, useRef } from 'react';
 import { mdiFacebook, mdiGithub, mdiLinkedin, mdiTwitter, mdiWeb, mdiStackOverflow } from '@mdi/js';
 import Icon from '@mdi/react';
 import { IPerson } from '../../services/people';
-import styles from './person-card.module.scss';
+import styles from './personCard.module.scss';
 import colors from '../../styles/colors';
 import ShowMore from '../showMore/showMore';
 import Label from '../label/label';
