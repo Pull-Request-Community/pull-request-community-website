@@ -1,7 +1,7 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
 import Layout from '../components/layout/layout';
-import { PersonCard } from '../components/personCard/personCard';
+import { PersonCard } from '../components/person-card/person-card';
 import { getPeople, IPerson } from '../services/people';
 import styles from '../styles/Home.module.scss';
 import { randomShuffle } from '../utils/randomShuffle';
