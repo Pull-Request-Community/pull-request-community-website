@@ -1,11 +1,14 @@
 const Title = ({ children, center, className, ...rest }: TitleProps) => {
+  // @ts-ignore
+  const { fontSize } = rest;
+
   return (
     <div className={`${className} Title`}>
       <p>{children}</p>
 
       <style jsx>{`
         .Title {
-          font-size: ${rest.fontSize ?? '3.8rem'};
+          font-size: ${fontSize ?? '3.8rem'};
           line-height: 1.8;
           font-weight: bold;
           text-align: ${center ?? 'right'};
