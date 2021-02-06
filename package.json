@@ -29,7 +29,7 @@
     }
   },
   "lint-staged": {
-    "people/*.{json}": [
+    "data/people/*.{json}": [
       "prettier --write",
       "git add"
     ],
