@@ -5,10 +5,10 @@
   font-weight: bold;
   color: white;
 
-  &[type="mentor"] {
+  &[role="mentor"] {
     background: palevioletred;
   }
-  &[type="admin"] {
+  &[role="admin"] {
     background: cornflowerblue;
   }
 

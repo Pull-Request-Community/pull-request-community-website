@@ -7,7 +7,7 @@ interface LabelInterface {
 
 function Label({ type, children }: LabelInterface) {
   return (
-    <div type={type} className={style.label}>
+    <div role={type} className={style.label}>
       {children}
     </div>
   );

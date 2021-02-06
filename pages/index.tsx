@@ -1,3 +1,4 @@
+import React from 'react';
 import { GetStaticProps } from 'next';
 import Layout from '../components/layout/layout';
 import { PersonCard } from '../components/personCard/personCard';
