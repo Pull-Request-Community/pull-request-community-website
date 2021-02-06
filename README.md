@@ -6,7 +6,7 @@
 
 You can add / update your personal profile by creating a Pull Request to this repo:
 
-1. Create a new JSON file in the [people](people/) directory, and name it as your GitHub username.  
+1. Create a new JSON file in the [people](data/people/) directory, and name it as your GitHub username.  
    e.g. If you GitHub user is MichalPorag, `MichalPorag.json`.
 
    The JSON file should look something like:
