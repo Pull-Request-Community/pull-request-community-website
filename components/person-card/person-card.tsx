@@ -1,5 +1,5 @@
 import { useMemo, useRef } from 'react';
-import { mdiFacebook, mdiGithub, mdiLinkedin, mdiTwitter, mdiWeb } from '@mdi/js';
+import { mdiFacebook, mdiGithub, mdiLinkedin, mdiTwitter, mdiWeb, mdiStackOverflow } from '@mdi/js';
 import Icon from '@mdi/react';
 import { IPerson } from '../../services/people';
 import styles from './person-card.module.scss';
@@ -21,6 +21,7 @@ export function PersonCard({ person }: IPersonProps) {
     facebook,
     twitter,
     website,
+    stackoverflow,
     themeColor,
     roles,
   } = person;
@@ -32,6 +33,7 @@ export function PersonCard({ person }: IPersonProps) {
       { link: twitter, icon: mdiTwitter },
       { link: facebook, icon: mdiFacebook },
       { link: website, icon: mdiWeb },
+      { link: stackoverflow, icon: mdiStackOverflow },
     ],
     [person]
   );

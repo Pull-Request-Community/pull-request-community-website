@@ -5,6 +5,7 @@ export interface IPerson {
   twitter?: string;
   facebook?: string;
   website?: string;
+  stackoverflow?: string;
   linkedin?: string;
   themeColor?: string;
   roles?: string[];
