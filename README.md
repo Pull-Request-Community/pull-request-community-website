@@ -50,8 +50,7 @@ You can add / update your personal profile by creating a Pull Request to this re
    }
    ```
 
-   The `name` and `description` fields are required and **need to be in Hebrew**.  
-   All the other fields are optional.
+   The `name`, and `description` fields are required and **need to be in Hebrew**.  
 
    Use the `description` field to introduce yourself: technologies that you love, hobbies, fun-facts,
    and anything that you are passionate about. Are you an architect? Do you speak Chinese? Studied amusement park
