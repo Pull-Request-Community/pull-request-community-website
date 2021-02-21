@@ -5,7 +5,7 @@ import Icon from '@mdi/react';
 import BasicButton from '../../buttons/basicButton';
 import colors from '../../../styles/colors';
 import { useRouter } from 'next/router';
-import SocialNetowrks from './socialNetworks';
+import SocialNetworks from '../../socialNetworks/socialNetworks';
 
 // const paths = [{ path: '/mentors', name: 'מנטורים' }];
 const paths = [];
@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar__wrapper">
-          <SocialNetowrks />
+          <SocialNetworks />
           <BasicButton>
             <a
               className="navbar__btn"

@@ -12,8 +12,7 @@ const SocialButton = ({ children, className }: BasicButtonProps) => {
           font-size: 2.4rem;
           border: none;
           border-radius: 100%;
-          align-items: center;
-          padding: 10px auto;
+          padding: 10px 0;
           transition: all 0.3s;
           max-height: 50px;
           max-width: 50px;

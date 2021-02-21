@@ -1,9 +1,10 @@
 import React from 'react';
 import Icon from '@mdi/react';
 import { mdiTelegram, mdiFacebook, mdiDiscord, mdiEmailNewsletter } from '@mdi/js';
-import SocialButton from '../../buttons/socialButton';
+import SocialButton from '../buttons/socialButton';
+import styles from './socialNetworks.module.scss';
 
-const SocialNetowrks = () => {
+const SocialNetworks = () => {
   const socialLinks = [
     {
       name: 'telegram',
@@ -32,52 +33,20 @@ const SocialNetowrks = () => {
   ];
 
   return (
-    <ul className="social__list">
+    <ul className={styles.social__list}>
       {socialLinks.map(function (item, index) {
         return (
           <li>
             <SocialButton className={item.name}>
-              <a className="social__btn" href={item.url} title={item.name} target="_blank">
-                <Icon className="social__btn--icon" path={item.icon} />
+              <a className={styles.social__btn} href={item.url} title={item.name} target="_blank">
+                <Icon className={styles.social__btn__icon} path={item.icon} />
               </a>
             </SocialButton>
           </li>
         );
       })}
-      <style jsx>{`
-        .social__list {
-          display: flex;
-          gap: 0.25rem;
-          list-style: none;
-          max-height: 50px;
-        }
-
-        .social__list li {
-          margin-left: 1em;
-        }
-
-        .social__btn {
-          color: #fff;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          padding: 10px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .social__btn a {
-          width: 100%;
-          height: 100%;
-        }
-
-        .social__btn--icon {
-          max-width: 34px;
-        }
-      `}</style>
     </ul>
   );
 };
 
-export default SocialNetowrks;
+export default SocialNetworks;
