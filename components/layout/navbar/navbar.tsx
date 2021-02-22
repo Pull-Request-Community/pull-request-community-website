@@ -5,6 +5,7 @@ import Icon from '@mdi/react';
 import BasicButton from '../../buttons/basicButton';
 import colors from '../../../styles/colors';
 import { useRouter } from 'next/router';
+import SocialNetworks from '../../socialNetworks/socialNetworks';
 
 // const paths = [{ path: '/mentors', name: 'מנטורים' }];
 const paths = [];
@@ -41,8 +42,12 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar__wrapper">
+          <SocialNetworks />
           <BasicButton>
-            <a className="navbar__btn" href="https://github.com/urish/pull-request-community#adding-your-profile">
+            <a
+              className="navbar__btn"
+              href="https://github.com/urish/pull-request-community#adding-your-profile"
+            >
               <span>הוסיפו אותי</span> <Icon className="navbar__btn--icon" path={mdiGithub} />
             </a>
           </BasicButton>
