@@ -62,7 +62,7 @@
       "format": "uri",
       "examples": ["https://medium.com/@miporagi"]
     },
-    "website": {
+    "stackoverflow": {
       "$id": "#/properties/stackoverflow",
       "type": "string",
       "title": "Stackoverflow profile link",

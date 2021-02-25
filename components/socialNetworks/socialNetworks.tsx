@@ -36,7 +36,7 @@ const SocialNetworks = () => {
     <ul className={styles.social__list}>
       {socialLinks.map(function (item, index) {
         return (
-          <li>
+          <li key={index}>
             <SocialButton className={item.name}>
               <a className={styles.social__btn} href={item.url} title={item.name} target="_blank">
                 <Icon className={styles.social__btn__icon} path={item.icon} />

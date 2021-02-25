@@ -1,0 +1,109 @@
+.container {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+
+  .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+    .input {
+      padding: 8px 16px;
+      border-radius: 4px;
+      color: #808080;
+      background-color: transparent;
+      border: 1px solid #808080;
+      font: Assistant 'sans-serif';
+      font-size: 24px;
+      line-height: 31px;
+      text-align: right;
+    }
+
+    .searchButton {
+      position: absolute;
+      left: 0px;
+      height: 25px;
+      width: 25px;
+      margin: 10px;
+      color: #ababab;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .dropdownContainer {
+    position: relative;
+    display: flex;
+    margin-left: 10px;
+    padding: 8px 16px;
+    align-items: center;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+
+    span {
+      color: #808080;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: right;
+    }
+
+    .dropdownIcon {
+      height: 25px;
+      width: 25px;
+      margin-right: 10px;
+      color: #808080;
+    }
+
+    ul {
+      position: absolute;
+      top: 55px;
+      right: 0px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 4px;
+      border: 1px solid #808080;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 8px 64px rgba(0, 0, 0, 0.25);
+      z-index: 20;
+    }
+
+    li {
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: right;
+      white-space: nowrap;
+      color: #808080;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e8e8e8;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        span {
+          margin: 0 16px;
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+      svg {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
