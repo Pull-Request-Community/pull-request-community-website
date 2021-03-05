@@ -1,0 +1,26 @@
+@import "media";
+
+.container {
+  width: 100%;
+
+  .cards__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & > [class^=person] {
+      margin-bottom: 45px;
+      margin-left: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: $smTablet) {
+  .container {
+    .cards__wrapper {
+      & > [class^=person] {
+        margin: 10px auto;
+      }
+    }
+  }
+}

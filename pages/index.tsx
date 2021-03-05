@@ -1,8 +1,9 @@
 import { GetStaticProps } from 'next';
-import Head from 'next/head';
-import { PersonCard } from '../components/person-card';
+import Layout from '../components/layout/layout';
+import { PersonCard } from '../components/personCard/personCard';
 import { getPeople, IPerson } from '../services/people';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.module.scss';
+import { randomShuffle } from '../utils/randomShuffle';
 
 interface IHomeProps {
   people: IPerson[];
@@ -10,29 +11,22 @@ interface IHomeProps {
 
 export default function Home({ people }: IHomeProps) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>קהילת Pull Request</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          קהילת <a href="http://facebook.com/groups/pullrequest">Pull Request</a>
-        </h1>
-
-        {people.map((person) => (
-          <PersonCard key={person.github} person={person} />
-        ))}
-      </main>
-    </div>
+    <Layout>
+      <div className={styles.container}>
+        <div className={styles.cards__wrapper}>
+          {people.map((person, i) => (
+            <PersonCard key={person.name + i} person={person} />
+          ))}
+        </div>
+      </div>
+    </Layout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
-      people: getPeople(),
+      people: randomShuffle(getPeople()),
     },
   };
 };
