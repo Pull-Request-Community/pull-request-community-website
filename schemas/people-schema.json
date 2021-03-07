@@ -62,11 +62,10 @@
       "format": "uri",
       "examples": ["https://medium.com/@miporagi"]
     },
-    "website": {
+    "stackoverflow": {
       "$id": "#/properties/stackoverflow",
       "type": "string",
       "title": "Stackoverflow profile link",
-      "description": "Your personal blog or website (it has to be about you)",
       "format": "uri",
       "examples": ["https://stackoverflow.com/users/1348195/benjamin-gruenbaum"]
     },
