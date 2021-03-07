@@ -13,7 +13,7 @@ const SocialButton = ({ children, className }: BasicButtonProps) => {
           border: none;
           border-radius: 100%;
           padding: 10px 0;
-          transition: all 0.3s;
+          transition: background-color 0.3s cubic-bezier(0.4, 0, 1, 1);
           max-height: 50px;
           max-width: 50px;
           display: flex;
@@ -38,7 +38,6 @@ const SocialButton = ({ children, className }: BasicButtonProps) => {
 
         .SocialButton:hover {
           filter: brightness(1.2);
-          transform: scale(1.02);
         }
       `}</style>
     </>
