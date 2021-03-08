@@ -21,7 +21,7 @@ const SocialNetworks = () => {
     {
       name: 'discord',
       displayName: 'Discord',
-      url: 'https://discord.gg/FDXyR4KP',
+      url: 'https://discord.gg/ZmChMVZxpU',
       icon: mdiDiscord,
     },
     {
