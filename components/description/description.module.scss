@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 3em;
+    font-weight: 300;
+    font-family: Assistant;
+    padding: 0px 100px;
+    background-color: white;
+    height: 300px;
+    margin-bottom: -30px;
+    width:100%;
+    box-shadow: 0 0 10px 5px rgb(0,0,0,0.2);
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.5em;
+      }
+}
+
+.brandColor {
+    color: #ce5a55;
+}
+
