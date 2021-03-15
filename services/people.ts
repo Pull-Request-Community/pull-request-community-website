@@ -9,9 +9,11 @@ export interface IPerson {
   linkedin?: string;
   themeColor?: string;
   roles?: string[];
+  customImage?: boolean;
 }
 
 export function getPeople() {
   const peopleContext = (require as any).context('../people', true, /\.json/);
+
   return peopleContext.keys().map(peopleContext) as IPerson;
 }
