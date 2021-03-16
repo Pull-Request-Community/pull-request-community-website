@@ -25,7 +25,7 @@ const Layout = ({ children }: LayoutProps) => {
                     padding: 0 25px;
                 }
                 .layout__body--container {
-                    margin-top: 00px;
+                    margin-top: 0px;
                 }
             `}</style>
     </div>
