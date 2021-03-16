@@ -1,3 +1,5 @@
+@import "../../styles//media.scss";
+
 
 .container {
   background: #fff;
@@ -6,17 +8,49 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.3);
+
+  @media only screen and (max-width: $mobile) {
+    height: 409px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }
 
 .content {
   margin-right: 143px;
+  @media only screen and (max-width: $mobile) {
+    padding: 24px 16px;
+    margin-right: 0;
+  }
 }
 
 .title {
   font-size:44px;
+  font-weight: 500
+  ;
+
+  @media only screen and (max-width: $mobile) {
+    font-size:24px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    font-size:28px;
+  }
+}
+
+.description {
+  font-size: 18px;
+  margin-top: 15px;
+
+  @media only screen and (max-width: $mobile) {
+    font-size:16px;
+  }
 }
 
 
 .contributions {
   padding-left: 110px;
 }
+
+
