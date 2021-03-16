@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './description.module.scss';
 import colors from '../../styles/colors';
+import Svg from './Svg';
 
 const Description = () => {
   return (
@@ -21,7 +22,9 @@ const Description = () => {
           <br /> מוזמנים למלא את הטופס הבא: https://forms.gle/6mHgTs5PnsfXUZ1f8
         </p>
       </div>
-      <div className={style.contributions}>b</div>
+      <div className={style.contributions}>
+        <Svg />
+      </div>
     </div>
   );
 };
