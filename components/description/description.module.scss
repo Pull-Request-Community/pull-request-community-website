@@ -1,3 +1,22 @@
+
 .container {
-  background: red;
+  background: #fff;
+  height: 371px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.3);
+}
+
+.content {
+  margin-right: 143px;
+}
+
+.title {
+  font-size:44px;
+}
+
+
+.contributions {
+  padding-left: 110px;
 }
