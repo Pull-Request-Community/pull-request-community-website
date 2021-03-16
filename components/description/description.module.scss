@@ -8,12 +8,11 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.3);
-
   @media only screen and (max-width: $mobile) {
     height: 409px;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    // justify-content: center;
+    // align-items: center;
   }
 }
 
@@ -23,10 +22,15 @@
     padding: 24px 16px;
     margin-right: 0;
   }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 24px 16px;
+    margin-right: 0;
+  }
 }
 
 .title {
-  font-size:44px;
+  font-size: 36px;
   font-weight: 500
   ;
 
@@ -35,22 +39,37 @@
   }
 
   @media only screen and (max-width: $tablet) {
-    font-size:28px;
+    font-size:24ppx;
   }
 }
 
 .description {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 15px;
 
   @media only screen and (max-width: $mobile) {
     font-size:16px;
   }
+
 }
 
 
 .contributions {
-  padding-left: 110px;
+  position: relative;
+  left: 5%;
+
+  @media only screen and (max-width: $mobile) {
+    padding: 0;
+    left: 0;
+    top: -80px;
+    margin: 0 auto;
+    transform: rotate(90deg);
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 0;
+    left: 1%;
+  }
 }
 
 
