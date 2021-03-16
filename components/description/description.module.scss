@@ -8,9 +8,11 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.3);
+  position: relative;
   @media only screen and (max-width: $mobile) {
     height: 409px;
     flex-direction: column;
+    overflow: inherit;
     // justify-content: center;
     // align-items: center;
   }
@@ -48,7 +50,7 @@
   margin-top: 15px;
 
   @media only screen and (max-width: $mobile) {
-    font-size:16px;
+    font-size:14px;
   }
 
 }
@@ -59,11 +61,12 @@
   left: 5%;
 
   @media only screen and (max-width: $mobile) {
+  position: absolute;
     padding: 0;
-    left: 0;
-    top: -80px;
+    top: 70%;
+    left: 50% !important;
     margin: 0 auto;
-    transform: rotate(90deg);
+    transform: rotate(90deg) translateY(10%);
   }
 
   @media only screen and (max-width: $tablet) {
