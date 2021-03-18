@@ -34,7 +34,7 @@
       "prettier --write",
       "git add"
     ],
-    "**/*.{ts,tsx,md}": [
+    "**/*.{ts,tsx,md,scss}": [
       "prettier --write",
       "git add"
     ]
