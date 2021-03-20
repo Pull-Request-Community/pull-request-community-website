@@ -1,9 +1,8 @@
-@import "../../styles/media";
+@import '../../styles/media';
 
 .card {
   width: 550px;
   height: auto;
-  max-height: 220px;
   min-height: 220px;
   display: flex;
   background-color: white;
@@ -19,7 +18,7 @@
   }
 
   &__img {
-    flex: .4;
+    flex: 0.4;
     background-position: center;
     background-size: cover;
 
@@ -31,7 +30,7 @@
 
   &__content {
     position: relative;
-    flex: .6;
+    flex: 0.6;
     padding: 10px 25px;
     display: flex;
     flex-direction: column;
@@ -47,11 +46,11 @@
 
       & > svg {
         width: 3rem;
-        transition: all .2s ease-in;
+        transition: all 0.2s ease-in;
 
         &:hover {
           transform: scale(1.1);
-          opacity: .8;
+          opacity: 0.8;
         }
       }
     }
@@ -87,7 +86,7 @@
 
     &__img,
     &__content {
-      flex: 1
+      flex: 1;
     }
 
     &__headline {

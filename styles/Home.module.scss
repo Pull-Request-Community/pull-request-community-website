@@ -1,16 +1,17 @@
-@import "media";
+@import 'media';
 
 .container {
   width: 100%;
 
   .cards__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    & > [class^=person] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    grid-template-rows: minmax(220px, auto);
+    justify-items: center;
+    transition: 1s ease;
+    column-gap: 30px;
+    & > [class^='person'] {
       margin-bottom: 45px;
-      margin-left: 30px;
     }
   }
 }
@@ -18,7 +19,7 @@
 @media only screen and (max-width: $smTablet) {
   .container {
     .cards__wrapper {
-      & > [class^=person] {
+      & > [class^='person'] {
         margin: 10px auto;
       }
     }

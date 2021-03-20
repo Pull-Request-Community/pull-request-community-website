@@ -12,17 +12,14 @@
   }
 }
 
-
-
 html {
-  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   direction: rtl;
-  background-color:#E8E8E8;
+  background-color: #e8e8e8;
   font-size: 10px;
 
   @media screen and (max-width: 600px) {
     font-size: 9px;
-    /* test */
   }
 }
