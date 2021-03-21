@@ -1,4 +1,4 @@
-@import 'media';
+@import "media";
 
 .container {
   width: 100%;
@@ -10,7 +10,7 @@
     justify-items: center;
     transition: 1s ease;
     column-gap: 30px;
-    & > [class^='person'] {
+    & > [class^="person"] {
       margin-bottom: 45px;
     }
   }
@@ -19,7 +19,7 @@
 @media only screen and (max-width: $smTablet) {
   .container {
     .cards__wrapper {
-      & > [class^='person'] {
+      & > [class^="person"] {
         margin: 10px auto;
       }
     }

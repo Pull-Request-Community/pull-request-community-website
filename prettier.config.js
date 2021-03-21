@@ -4,4 +4,12 @@ module.exports = {
   singleQuote: true,
   tabWidth: 2,
   endOfLine: 'auto',
+  overrides: [
+    {
+      files: '*.scss',
+      options: {
+        singleQuote: false,
+      },
+    },
+  ],
 };
