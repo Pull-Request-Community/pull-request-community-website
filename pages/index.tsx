@@ -4,7 +4,6 @@ import { PersonCard } from '../components/personCard/personCard';
 import { getPeople, IPerson } from '../services/people';
 import styles from '../styles/Home.module.scss';
 import { randomShuffle } from '../utils/randomShuffle';
-
 interface IHomeProps {
   people: IPerson[];
 }
