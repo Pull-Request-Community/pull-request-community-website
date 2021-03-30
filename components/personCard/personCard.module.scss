@@ -1,9 +1,10 @@
-@import '../../styles/media';
+@import "../../styles/media";
 
 .card {
-  width: 550px;
-  height: auto;
+  min-width: 550px;
+  width: 100%;
   min-height: 220px;
+  height: 100%;
   display: flex;
   background-color: white;
   border-radius: 8px;

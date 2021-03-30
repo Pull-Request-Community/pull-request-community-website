@@ -7,21 +7,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
     grid-template-rows: minmax(220px, auto);
+    gap: 30px 45px;
     justify-items: center;
-    transition: 1s ease;
-    column-gap: 30px;
-    & > [class^="person"] {
-      margin-bottom: 45px;
-    }
   }
 }
 
 @media only screen and (max-width: $smTablet) {
   .container {
     .cards__wrapper {
-      & > [class^="person"] {
-        margin: 10px auto;
-      }
+      row-gap: 10px;
     }
   }
 }
