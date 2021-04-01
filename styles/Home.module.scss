@@ -5,17 +5,9 @@
 
   .cards__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-    grid-template-rows: minmax(220px, auto);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: 1fr;
     gap: 30px 45px;
     justify-items: center;
-  }
-}
-
-@media only screen and (max-width: $smTablet) {
-  .container {
-    .cards__wrapper {
-      row-gap: 10px;
-    }
   }
 }
