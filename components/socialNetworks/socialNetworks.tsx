@@ -3,6 +3,7 @@ import Icon from '@mdi/react';
 import { mdiTelegram, mdiFacebook, mdiDiscord, mdiEmailNewsletter } from '@mdi/js';
 import SocialButton from '../buttons/socialButton';
 import styles from './socialNetworks.module.scss';
+import { v4 as uuidv4 } from 'uuid';
 
 const SocialNetworks = () => {
   const socialLinks = [
@@ -34,9 +35,9 @@ const SocialNetworks = () => {
 
   return (
     <ul className={styles.social__list}>
-      {socialLinks.map(function (item, index) {
+      {socialLinks.map(function (item, i) {
         return (
-          <li>
+          <li key={uuidv4()}>
             <SocialButton className={item.name}>
               <a className={styles.social__btn} href={item.url} title={item.name} target="_blank">
                 <Icon className={styles.social__btn__icon} path={item.icon} />

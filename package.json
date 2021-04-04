@@ -14,7 +14,8 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-responsive": "^8.2.0",
-    "sass": "^1.32.0"
+    "sass": "^1.32.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/node": "^14.11.2",
