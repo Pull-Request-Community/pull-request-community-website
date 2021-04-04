@@ -9,6 +9,7 @@ export interface IPerson {
   linkedin?: string;
   themeColor?: string;
   roles?: string[];
+  customImage?: boolean;
 }
 
 export function getPeople() {

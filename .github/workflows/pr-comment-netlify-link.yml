@@ -1,0 +1,11 @@
+name: Add Netlify preview link to pull request
+on: [pull_request_target]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: urish/auto-comment@id-arg-release
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pullRequestOpened: >
+            Preview on netlify: https://deploy-preview-{{ id }}--pull-request.netlify.app/

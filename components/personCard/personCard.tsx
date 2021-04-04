@@ -25,6 +25,7 @@ export function PersonCard({ person }: IPersonProps) {
     stackoverflow,
     themeColor,
     roles,
+    customImage,
   } = person;
   const theme = useMemo(() => themeColor ?? colors.secondary_color, []);
   const icons = useMemo(
@@ -46,7 +47,11 @@ export function PersonCard({ person }: IPersonProps) {
     <div ref={card} className={styles.card} style={{ borderBottomColor: theme }}>
       <div
         className={styles.card__img}
-        style={{ backgroundImage: `url(https://github.com/${github}.png)` }}
+        style={{
+          backgroundImage: customImage
+            ? `url(images/people/${github}.jpeg)`
+            : `url(https://github.com/${github}.png)`,
+        }}
       />
       <div className={styles.card__content}>
         {roles && (

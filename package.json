@@ -10,7 +10,7 @@
   "dependencies": {
     "@mdi/js": "^5.6.55",
     "@mdi/react": "^1.4.0",
-    "next": "^10.0.0",
+    "next": "^10.0.8",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-responsive": "^8.2.0",
@@ -34,7 +34,7 @@
       "prettier --write",
       "git add"
     ],
-    "**/*.{ts,tsx,md}": [
+    "**/*.{ts,tsx,md,scss}": [
       "prettier --write",
       "git add"
     ]
