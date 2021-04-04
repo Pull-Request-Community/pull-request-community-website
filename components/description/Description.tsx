@@ -32,33 +32,3 @@ const Description = () => {
 };
 
 export default Description;
-
-<div class="content">
-  <h1 class="title">
-    Using SCSS's <code>@each</code> directive
-  </h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ex doloribus exercitationem
-    saepe voluptas recusandae,{' '}
-    <a class="articles" href="#">
-      soluta
-    </a>
-    , ab eaque repellat eius alias! Doloribus, libero neque aperiam atque odit repudiandae tenetur
-    facere accusamus, explicabo vero optio id.{' '}
-    <a class="youtube" href="#">
-      Consectetur fuga
-    </a>{' '}
-    ut, in ipsa illo eos vero fugiat quam dignissimos sint voluptas deleniti facilis reiciendis,
-    placeat praesentium nemo magnam tenetur? Aspernatur dolorum cum quisquam labore consectetur,
-    molestiae eius in voluptas repudiandae quas perspiciatis,{' '}
-    <a class="community" href="#">
-      maxime a veritatis
-    </a>{' '}
-    dolor ratione velit suscipit dignissimos. Suscipit rerum atque{' '}
-    <a class="courses" href="#">
-      numquam quisquam corrupti
-    </a>
-    , esse autem modi velit repellendus, dolorem nostrum consequuntur soluta nesciunt animi
-    recusandae temporibus laborum optio vero cum.
-  </p>
-</div>;
