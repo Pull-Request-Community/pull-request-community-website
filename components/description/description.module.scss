@@ -21,7 +21,7 @@ $colors: (
 
 .container {
   width: 100%;
-  height: 400px;
+  height: 371px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +30,29 @@ $colors: (
   font-family: Assistant;
   background-color: white;
   box-shadow: 0 0 10px 5px rgb(0, 0, 0, 0.2);
-  padding: 0 25px;
+  padding: 25px;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: -30px;
+
+  @media only screen and (max-width: 768px) {
+    .container {
+      // height: 409px;
+      min-height: max-content;
+    }
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .squareContainer {
+      border: 1px solid red;
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .brandColor {

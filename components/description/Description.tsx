@@ -17,7 +17,7 @@ const Description = () => {
           שלנו בפייסבוק.
           <br />
           אם אתם רוצים להצטרף כמנטורים של פרויקט ,<br /> מוזמנים למלא את הטופס הבא:
-          https://forms.gle/6mHgTs5PnsfXUZ1f8
+          <a href="https://forms.gle/6mHgTs5PnsfXUZ1f8">✍</a>
         </p>
       </div>
       <ul className={style.squareContainer}>
