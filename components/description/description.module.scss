@@ -10,11 +10,11 @@ $colors: (
   .#{$name} {
     width: 25px;
     height: 25px;
-    background: lighten($color, 5%);
+    background: darken($color, 0%);
     border-radius: 5px;
-    box-shadow: 0 0 3px 1px $color;
-    border: 5px solid lighten($color, 0%);
-    margin: 5px 0;
+    box-shadow: 0 0 5px 1px lighten($color, 25%);
+    border: 5px solid darken($color, 5%);
+    margin: 15px 0;
     transform: rotate(-90deg);
   }
 }
