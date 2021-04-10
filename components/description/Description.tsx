@@ -21,11 +21,11 @@ const Description = () => {
         </p>
       </div>
       <ul className={style.squareContainer}>
-        <li className={style.one} id="1"></li>
-        <li className={style.two} id="2"></li>
-        <li className={style.three} id="3"></li>
-        <li className={style.four} id="4"></li>
-        <li className={style.five} id="5"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
     </div>
   );
