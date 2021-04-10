@@ -18,15 +18,6 @@ const Layout = ({ children }: LayoutProps) => {
       </Head>
       <Navbar />
       <div className="layout__container layout__body--container">{children}</div>
-
-      <style>{`
-                .layout__container {
-                    margin: 0 auto;
-                }
-                .layout__body--container {
-                    margin-top: 0px;
-                }
-            `}</style>
     </div>
   );
 };
