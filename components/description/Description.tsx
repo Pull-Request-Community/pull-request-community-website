@@ -1,13 +1,14 @@
 import React from 'react';
 import style from './description.module.scss';
+import colors from '../../styles/colors';
 
 const Description = () => {
   return (
     <div className={style.container}>
       <div>
         <h3>
-          <span className={style.brandColor}>Pull Request</span> עוזרת לכם להיכנס לפרוייקטי קוד פתוח
-          ולתרום להם ע"י <br />
+          <span style={{ color: colors.secondary_color }}>Pull Request</span> עוזרת לכם להיכנס
+          לפרוייקטי קוד פתוח ולתרום להם ע"י <br />
           יצירת סביבה תומכת ובטוחה וחיבור עם מנטורים בעלי ניסיון שאכפת להם שתצליחו
         </h3>
         <p className={style.subDesc}>
