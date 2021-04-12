@@ -22,9 +22,7 @@ $colors: #456c3d, #669f54, #7ec16a, #b9e7ac, #ecedf0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 4vmin;
-  font-weight: 300;
-  font-family: Assistant;
+  font-size: 3.5rem;
   background-color: white;
   box-shadow: 0 0 10px 5px rgb(0, 0, 0, 0.2);
   padding: 25px;
@@ -41,7 +39,7 @@ $colors: #456c3d, #669f54, #7ec16a, #b9e7ac, #ecedf0;
 }
 
 .subDesc {
-  font-size: 3vmin;
+  font-size: 3rem;
   margin-top: 15px;
 }
 
