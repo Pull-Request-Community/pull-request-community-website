@@ -1,0 +1,43 @@
+.workshop {
+  font-size: 1.6rem;
+  position: relative;
+  top: -100px;
+
+  &_container {
+    position: relative;
+    margin: 0 auto;
+    padding: 50px !important;
+    width: 1200px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4px;
+      height: 100%;
+      background-color: #ce5a55;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &_mentors {
+    padding: 5px;
+    margin-top: 30px;
+    text-align: center;
+    width: auto;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 10px;
+    margin: 5px;
+    justify-content: center;
+
+    & > div {
+      background-color: lightgrey;
+    }
+  }
+}
