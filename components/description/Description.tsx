@@ -22,11 +22,9 @@ const Description = () => {
         </p>
       </div>
       <ul className={style.squareContainer}>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        {Array.from({ length: 5 }).map((_, idx) => (
+          <li key={idx} />
+        ))}
       </ul>
     </div>
   );
