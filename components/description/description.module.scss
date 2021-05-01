@@ -3,11 +3,9 @@
 $colors: #456c3d, #669f54, #7ec16a, #b9e7ac, #ecedf0;
 
 .squareContainer li {
-  width: 3vmin;
-  height: 3vmin;
+  width: 0.8em;
+  height: 0.8em;
   border-radius: 5px;
-  margin: 15px 0;
-  transform: rotate(-90deg);
 }
 
 @for $i from 1 through length($colors) {
@@ -20,24 +18,17 @@ $colors: #456c3d, #669f54, #7ec16a, #b9e7ac, #ecedf0;
 
 .container {
   width: 100%;
-  min-height: 45vh;
+  height: max-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 3.5rem;
   background-color: white;
   box-shadow: 0 0 10px 5px rgb(0, 0, 0, 0.2);
-  padding: 25px;
-  flex-wrap: wrap;
+  padding: 25px 25px 100px;
   position: relative;
   margin-bottom: -30px;
-
-  @media only screen and (max-width: $mdDesktop) {
-    .squareContainer {
-      transform: rotate(90deg);
-      margin: 0 auto;
-    }
-  }
+  gap: 20px;
 }
 
 .subDesc {
@@ -48,4 +39,21 @@ $colors: #456c3d, #669f54, #7ec16a, #b9e7ac, #ecedf0;
 .squareContainer {
   list-style: none;
   width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-self: center;
+  align-self: center;
+}
+
+@media only screen and (max-width: $mdDesktop) {
+  .container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .squareContainer {
+    flex-direction: row;
+    justify-self: center;
+  }
 }
