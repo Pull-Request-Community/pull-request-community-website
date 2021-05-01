@@ -13,6 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
         <link rel="icon" href="/favicon.png" />
         <meta property="image" content="/images/logo.png" />
         <meta property="og:image" content="/images/logo.png" />
+        <meta name="viewport" content="width=device-width" />
         <title>{title}</title>
         {metaContents && metaContents.map((meta, i) => <meta key={i} {...meta} />)}
       </Head>
