@@ -1,6 +1,14 @@
 import { useMemo, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { mdiFacebook, mdiGithub, mdiLinkedin, mdiTwitter, mdiWeb, mdiStackOverflow } from '@mdi/js';
+import {
+  mdiFacebook,
+  mdiGithub,
+  mdiLinkedin,
+  mdiTwitter,
+  mdiWeb,
+  mdiStackOverflow,
+  mdiMastodon,
+} from '@mdi/js';
 import Icon from '@mdi/react';
 import { IPerson } from '../../services/people';
 import styles from './personCard.module.scss';
@@ -22,6 +30,7 @@ export function PersonCard({ person }: IPersonProps) {
     facebook,
     twitter,
     website,
+    mastodon,
     stackoverflow,
     themeColor,
     roles,
@@ -35,6 +44,7 @@ export function PersonCard({ person }: IPersonProps) {
       { link: twitter, icon: mdiTwitter },
       { link: facebook, icon: mdiFacebook },
       { link: website, icon: mdiWeb },
+      { link: mastodon, icon: mdiMastodon },
       { link: stackoverflow, icon: mdiStackOverflow },
     ],
     [person]

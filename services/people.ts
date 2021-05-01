@@ -7,6 +7,7 @@ export interface IPerson {
   website?: string;
   stackoverflow?: string;
   linkedin?: string;
+  mastodon?: string;
   themeColor?: string;
   roles?: string[];
   customImage?: boolean;

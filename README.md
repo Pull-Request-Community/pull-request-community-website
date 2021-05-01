@@ -46,6 +46,7 @@ You can add / update your personal profile by creating a Pull Request to this re
      "linkedin": "Link to your LinkedIn page (optional)",
      "stackoverflow": "Link to your Stack Overflow page (optional)",
      "website": "Link to your personal blog / website (optional)",
+     "mastodon": "Link to your personal Mastodon profile (optional)",
      "description": "פסקה או שתיים על עצמך: רקע מקצועי, עבודה, תחביבים ומה שחשוב לך שהחברים בקבוצה ידעו"
    }
    ```
