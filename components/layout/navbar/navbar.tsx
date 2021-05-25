@@ -74,6 +74,7 @@ const Navbar = () => {
           width: 100%;
           display: flex;
           justify-content: space-between;
+          padding: 0 25px;
         }
 
         .navbar__btn {
