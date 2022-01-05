@@ -1,0 +1,36 @@
+.container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  margin-top: 25px;
+  position: absolute;
+  width: 1424px;
+  height: 58px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+  text-align: center;
+  color: #ce5a55;
+}
+
+.star {
+  width: 51px;
+  height: 51px;
+  transform: rotate(15deg);
+  float: right;
+  margin-left: 90px;
+  background-image: url("../public/Star\ 1.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.starText {
+  transform: rotate(20deg);
+  font-weight: bold;
+}
