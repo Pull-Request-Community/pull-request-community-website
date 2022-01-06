@@ -1,36 +1,26 @@
-.container {
-  margin-top: 50px;
+.title {
   display: flex;
   justify-content: center;
-}
-
-.title {
-  margin-top: 25px;
-  position: absolute;
-  width: 1424px;
-  height: 58px;
-  font-style: normal;
+  margin-top: 90px;
   font-weight: bold;
   font-size: 36px;
-  line-height: 47px;
-  text-align: center;
   color: #ce5a55;
 }
 
 .star {
+  position: absolute;
   width: 51px;
   height: 51px;
-  transform: rotate(15deg);
-  float: right;
-  margin-left: 90px;
   background-image: url("../public/Star\ 1.svg");
-  background-repeat: no-repeat;
+  margin: -30px 0 0 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.starText {
-  transform: rotate(20deg);
-  font-weight: bold;
+.star::after {
+  content: "30K";
+  transform: rotate(30deg);
+  font-size: 12px;
+  color: black;
 }
