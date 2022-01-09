@@ -1,5 +1,4 @@
 import { useMemo, useRef } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import {
   mdiFacebook,
   mdiGithub,

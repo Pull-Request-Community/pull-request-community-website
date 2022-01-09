@@ -5,7 +5,7 @@ import SocialButton from '../buttons/socialButton';
 import styles from './socialNetworks.module.scss';
 import { v4 as uuidv4 } from 'uuid';
 
-const SocialNetworks = () => {
+const SocialNetworks = ({ className = '' }) => {
   const socialLinks = [
     {
       name: 'telegram',
@@ -34,7 +34,7 @@ const SocialNetworks = () => {
   ];
 
   return (
-    <ul className={styles.social__list}>
+    <ul className={`${styles.social__list} ${className}`}>
       {socialLinks.map(function (item, i) {
         return (
           <li key={uuidv4()}>
