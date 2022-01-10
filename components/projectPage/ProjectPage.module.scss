@@ -1,0 +1,80 @@
+.descriptionContainer {
+  margin: 0 70px 0 100px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 10px 0;
+  font-weight: bold;
+  font-size: 36px;
+  color: #0b008e;
+}
+
+.star {
+  width: 51px;
+  height: 51px;
+  background-image: url("../../public/Star\ 1.svg");
+  margin: -30px 0 0 -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star::after {
+  content: "30K";
+  transform: rotate(30deg);
+  font-size: 12px;
+  color: black;
+}
+
+.description {
+  font-size: 16px;
+}
+
+.infoContainer {
+  direction: ltr;
+  margin: 70px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.license {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.languages {
+  width: 55px;
+  height: 22px;
+  margin: 0 0 0 50px;
+  border-radius: 13px;
+  background: #ce5a55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #e2e2e2;
+  user-select: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .descriptionContainer {
+    margin: 0 10px 0 40px;
+  }
+
+  .infoContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .languages {
+    margin: 0 0 0 0;
+  }
+  .description {
+    font-size: 10px;
+  }
+}
