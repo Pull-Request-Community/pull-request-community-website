@@ -1,17 +1,19 @@
 import Link from 'next/link';
-import Title from '../../typography/title';
+import { useMediaQuery } from 'react-responsive';
 import { mdiGithub } from '@mdi/js';
 import Icon from '@mdi/react';
+import Title from '../../typography/title';
 import BasicButton from '../../buttons/basicButton';
 import colors from '../../../styles/colors';
 import { useRouter } from 'next/router';
 import SocialNetworks from '../../socialNetworks/socialNetworks';
+import { mobile } from '../../../utils/mediaQueries';
 
-// const paths = [{ path: '/mentors', name: 'מנטורים' }];
 const paths = [];
 
 const Navbar = () => {
   const { asPath } = useRouter();
+  const isMobile = useMediaQuery({ query: mobile });
 
   return (
     <div className="navbar">
@@ -42,11 +44,11 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar__wrapper">
-          <SocialNetworks />
+          {!isMobile && <SocialNetworks />}
           <BasicButton>
             <a
               className="navbar__btn"
-              href="https://github.com/urish/pull-request-community#adding-your-profile"
+              href="https://github.com/MichalPorag/pull-request-community#adding-your-profile"
             >
               <span>הוסיפו אותי</span> <Icon className="navbar__btn--icon" path={mdiGithub} />
             </a>
