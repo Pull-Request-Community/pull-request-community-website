@@ -6,6 +6,7 @@ import { getPeople, IPerson } from '../services/people';
 import styles from '../styles/Home.module.scss';
 import { randomShuffle } from '../utils/randomShuffle';
 import MainPageDescription from '../components/main-page-description/MainPageDescription';
+
 interface IHomeProps {
   people: IPerson[];
 }

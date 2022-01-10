@@ -1,0 +1,26 @@
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  font-weight: bold;
+  font-size: 36px;
+  color: #ce5a55;
+}
+
+.star {
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  background-image: url("../public/Star\ 1.svg");
+  margin: -30px 0 0 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star::after {
+  content: "30K";
+  transform: rotate(30deg);
+  font-size: 12px;
+  color: black;
+}

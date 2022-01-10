@@ -13,6 +13,12 @@ const Title = ({ children, center, className, ...rest }: TitleProps) => {
           font-weight: bold;
           text-align: ${center ?? 'right'};
         }
+
+        @media only screen and (max-width: 800px) {
+          .Title {
+            font-size: 2.2rem;
+          }
+        }
       `}</style>
     </div>
   );

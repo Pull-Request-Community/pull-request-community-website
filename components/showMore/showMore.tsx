@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { mobile } from '../../utils/mediaQueries';
 
 interface ShowMoreInterface {
   text: string;
@@ -20,7 +21,7 @@ const ShowMore = ({
 }: ShowMoreInterface) => {
   const element = useRef();
   const [showMore, setShowMore] = useState(defaultShowMoreMode);
-  const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+  const isMobile = useMediaQuery({ query: mobile });
   const currentMaxCharacter = useMemo(() => {
     if (mobileMaxCharacter) {
       return isMobile ? mobileMaxCharacter : maxCharacter;

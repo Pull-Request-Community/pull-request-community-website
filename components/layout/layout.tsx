@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { getMetaData } from '../../services/metaData';
 import Navbar from './navbar/navbar';
+import Footer from './footer/footer';
 
 const Layout = ({ children }: LayoutProps) => {
   const currentRoute = useRouter().pathname;
@@ -19,6 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
       </Head>
       <Navbar />
       <div className="layout__container layout__body--container">{children}</div>
+      <Footer />
     </div>
   );
 };
