@@ -17,7 +17,7 @@ function ProjectsPage() {
         Libero volutpat sed cras ornare arcu dui vivamus. Quisque egestas diam in arcu cursus
         euismod. Egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam. In egestas erat
         imperdiet sed euismod nisi porta. Gravida in fermentum et sollicitudin ac orci phasellus
-        egestas tellus.
+        egestas tellus.{' '}
       </p>
 
       <div className={style.infoContainer}>
