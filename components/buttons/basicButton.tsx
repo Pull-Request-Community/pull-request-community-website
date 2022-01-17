@@ -9,13 +9,17 @@ const BasicButton = ({ children, className }: BasicButtonProps) => {
           user-select: none;
           cursor: pointer;
           color: white;
-          font-size: 2.4rem;
+          font-size: 1.6rem;
           border: none;
-          border-radius: 30px;
+          border-radius: 64px;
           background-color: ${colors.secondary_color};
+          display: flex;
           align-items: center;
-          padding: 10px 15px;
+          justify-content: center;
+          padding: 6px 12px 6px 6px;
           transition: all 0.3s;
+          width: 126px;
+          height: 36px;
         }
 
         .BasicButton:hover {
