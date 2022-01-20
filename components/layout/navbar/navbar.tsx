@@ -19,47 +19,30 @@ const Navbar = () => {
     <div className="navbar">
       <div className="layout__container navbar__container">
         <div className="navbar__wrapper">
-          <Link shallow href="/">
-            <a>
-              <img className="navbar__logo" src="/images/logo.png" />
-            </a>
-          </Link>
-          <div className="navbar__navs">
-            <Link shallow href="/">
-              <a>
-                <Title className="navbar__title">קהילת Pull Request</Title>
-              </a>
-            </Link>
-            {paths && (
-              <div className="navbar__tabs">
-                {paths.map(({ path, name }, i) => (
-                  <Link key={path + name + i} shallow href={path}>
-                    <a className={`navbar__tab ${asPath === path && 'navbar__tab-active'}`}>
-                      {name}
-                    </a>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
-        <div className="navbar__wrapper">
           {!isMobile && <SocialNetworks />}
           <BasicButton>
             <a
               className="navbar__btn"
               href="https://github.com/MichalPorag/pull-request-community#adding-your-profile"
             >
-              <span>הוסיפו אותי</span> <Icon className="navbar__btn--icon" path={mdiGithub} />
+              <span>הוסיפו אותי</span>{' '}
+              <Icon style={{ width: '24px' }} className="navbar__btn--icon" path={mdiGithub} />
             </a>
           </BasicButton>
+        </div>
+        <div className="navbar__wrapper">
+          <Link shallow href="/">
+            <a className="logo__wrapper">
+              <img className="navbar__logo" src="/images/logo.png" />
+            </a>
+          </Link>
         </div>
       </div>
 
       <style jsx>{`
         .navbar {
           color: white;
-          height: 150px;
+          height: 50px;
           background-color: #242831;
           display: flex;
           align-items: center;
@@ -70,6 +53,7 @@ const Navbar = () => {
         .navbar__wrapper {
           display: flex;
           align-items: center;
+          justify-content: center;
         }
 
         .navbar__container {
@@ -79,24 +63,28 @@ const Navbar = () => {
           padding: 0 25px;
         }
 
+        .navbar__btn--icon {
+          color: blue;
+        }
+
         .navbar__btn {
-          user-select: none;
           display: flex;
-          justify-content: center;
           align-items: center;
+          gap: 10px;
           white-space: nowrap;
-          width: 150px;
         }
 
         .navbar__btn > span {
-          // font-size: 2rem;
-          margin-left: 10px;
+          font-weight: bold;
         }
 
         .navbar__logo {
-          width: 90px;
-          height: 90px;
-          margin-left: 25px;
+          position: relative;
+          top: 25px;
+          left: -15px;
+          z-index: 1;
+          width: 82px;
+          height: 82px;
         }
 
         .navbar__title {
@@ -150,11 +138,7 @@ const Navbar = () => {
 
         @media only screen and (max-width: 600px) {
           .navbar {
-            height: 100px;
-          }
-          .navbar__logo {
-            width: 70px;
-            height: 70px;
+            height: 50px;
           }
 
           .navbar__btn {

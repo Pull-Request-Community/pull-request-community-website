@@ -14,8 +14,8 @@ const SocialButton = ({ children, className }: BasicButtonProps) => {
           border-radius: 100%;
           padding: 10px 0;
           transition: background-color 0.3s cubic-bezier(0.4, 0, 1, 1);
-          max-height: 50px;
-          max-width: 50px;
+          max-height: 36px;
+          max-width: 36px;
           display: flex;
           justify-content: center;
           align-items: center;
