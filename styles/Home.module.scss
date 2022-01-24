@@ -15,3 +15,13 @@
     margin-bottom: 100px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+
+    .cards__wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+}
