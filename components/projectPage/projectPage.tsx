@@ -1,5 +1,5 @@
 import React from 'react';
-import Languages from './languages/Languages';
+import Technologies from './technologies/Technologies';
 import style from './ProjectPage.module.scss';
 
 function ProjectsPage() {
@@ -21,7 +21,7 @@ function ProjectsPage() {
       </p>
 
       <div className={style.infoContainer}>
-        <Languages />
+        <Technologies />
         <div className={style.license}>Mozilla Public License 2.0</div>
       </div>
     </div>
