@@ -13,7 +13,9 @@ export default function vast() {
 
   return (
     <>
-      <Layout descriptionText={ProjectPage()}></Layout>
+      <Layout descriptionText={ProjectPage()}>
+        <h1>projects</h1>
+      </Layout>
     </>
   );
 }
