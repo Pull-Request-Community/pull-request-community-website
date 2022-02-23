@@ -8,12 +8,25 @@ import colors from '../../../styles/colors';
 import { useRouter } from 'next/router';
 import SocialNetworks from '../../socialNetworks/socialNetworks';
 import { mobile } from '../../../utils/mediaQueries';
+import { useEffect, useState } from 'react';
 
-const paths = [];
-
-const Navbar = () => {
+const Navbar = ({ DesHeight }) => {
   const { asPath } = useRouter();
   const isMobile = useMediaQuery({ query: mobile });
+  const [className, setClassName] = useState('navbar__logo');
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      if (window.pageYOffset >= DesHeight - 50) {
+        setClassName('navbar__logo__small');
+      } else {
+        setClassName('navbar__logo');
+      }
+    };
+    window.addEventListener('scroll', scrollHandler);
+
+    return () => window.removeEventListener('resize', scrollHandler);
+  }, [DesHeight]);
 
   return (
     <div className="navbar">
@@ -33,7 +46,7 @@ const Navbar = () => {
         <div className="navbar__wrapper">
           <Link shallow href="/">
             <a className="logo__wrapper">
-              <img className="navbar__logo" src="/images/logo.png" />
+              <img className={className} src="/images/logo.png" />
             </a>
           </Link>
         </div>
@@ -41,6 +54,8 @@ const Navbar = () => {
 
       <style jsx>{`
         .navbar {
+          position: fixed;
+          z-index: 100;
           color: white;
           height: 50px;
           background-color: #242831;
@@ -85,6 +100,11 @@ const Navbar = () => {
           z-index: 1;
           width: 82px;
           height: 82px;
+        }
+
+        .navbar__logo__small {
+          width: 36px;
+          height: 36px;
         }
 
         .navbar__title {

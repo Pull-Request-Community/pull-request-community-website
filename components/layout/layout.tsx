@@ -3,10 +3,13 @@ import Head from 'next/head';
 import { getMetaData } from '../../services/metaData';
 import Navbar from './navbar/navbar';
 import Footer from './footer/footer';
+import Description from '../description/Description';
+import { useState } from 'react';
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, descriptionText }: LayoutProps) => {
   const currentRoute = useRouter().pathname;
   const { title, metaContents } = getMetaData(currentRoute);
+  const [currentHeight, setCurrentHeight] = useState(0);
 
   return (
     <div>
@@ -18,7 +21,13 @@ const Layout = ({ children }: LayoutProps) => {
         <title>{title}</title>
         {metaContents && metaContents.map((meta, i) => <meta key={i} {...meta} />)}
       </Head>
-      <Navbar />
+      <Navbar DesHeight={currentHeight} />
+      <Description
+        descriptionOutput={descriptionText}
+        descriptionHeight={(hight) => {
+          setCurrentHeight(hight);
+        }}
+      />
       <div className="layout__container layout__body--container">{children}</div>
       <Footer />
     </div>
@@ -27,6 +36,7 @@ const Layout = ({ children }: LayoutProps) => {
 
 interface LayoutProps {
   children: object;
+  descriptionText: object;
 }
 
 export default Layout;
