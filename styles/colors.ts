@@ -1,5 +1,5 @@
 export default {
-  secondary_color: '#CE5A55',
+  secondary_color: 'var(--primary)',
   facebook: '#1778F2',
   telegram: '#0088cc',
   newsletter: '#808080',

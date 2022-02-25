@@ -16,10 +16,33 @@ html {
   font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   direction: rtl;
-  background-color: #e8e8e8;
+  background-color: var(--background-color);
+  color: var(--text);
   font-size: 10px;
 
   @media screen and (max-width: 600px) {
     font-size: 9px;
   }
+
+  .toggle-dark-mode {
+    background-color: transparent;
+    border: none;
+    margin-left: 1rem;
+  }
+}
+
+html {
+  --primary: #ce5a55;
+  --background-color: white;
+  --card-background: white;
+  --header-background: #242831;
+  --text: #1d1d1d;
+}
+
+html.dark {
+  --primary: #ef3a32;
+  --background-color: black;
+  --card-background: #1d1d1d;
+  --header-background: #f3f4f6;
+  --text: #f3f4f6;
 }
