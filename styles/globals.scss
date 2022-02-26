@@ -33,16 +33,18 @@ html {
 
 html {
   --primary: #ce5a55;
-  --background-color: white;
+  --background-color: #e8e8e8;
+  --background-description: white;
   --card-background: white;
   --header-background: #242831;
   --text: #1d1d1d;
 }
 
 html.dark {
-  --primary: #ef3a32;
-  --background-color: black;
-  --card-background: #1d1d1d;
-  --header-background: #f3f4f6;
-  --text: #f3f4f6;
+  --primary: #ce5a55;
+  --background-color: #353535;
+  --background-description: #202529;
+  --card-background: #292e33;
+  --header-background: #353535;
+  --text: #ffffff;
 }
