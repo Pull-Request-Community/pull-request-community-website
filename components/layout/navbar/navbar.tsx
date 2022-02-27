@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import { mdiGithub } from '@mdi/js';
 import Icon from '@mdi/react';
 import Title from '../../typography/title';
+import { useTheme } from 'next-themes';
 import BasicButton from '../../buttons/basicButton';
 import colors from '../../../styles/colors';
 import { useRouter } from 'next/router';
@@ -14,6 +15,7 @@ const Navbar = ({ DesHeight }) => {
   const { asPath } = useRouter();
   const isMobile = useMediaQuery({ query: mobile });
   const [className, setClassName] = useState('navbar__logo');
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -32,6 +34,36 @@ const Navbar = ({ DesHeight }) => {
     <div className="navbar">
       <div className="layout__container navbar__container">
         <div className="navbar__wrapper">
+          <button
+            aria-label="Toggle Dark Mode"
+            type="button"
+            className="toggle-dark-mode"
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              stroke="currentColor"
+              style={{ height: '24px', width: '24px' }}
+            >
+              {theme === 'dark' ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                />
+              )}
+            </svg>
+          </button>
           {!isMobile && <SocialNetworks />}
           <BasicButton>
             <a
@@ -58,7 +90,7 @@ const Navbar = ({ DesHeight }) => {
           z-index: 100;
           color: white;
           height: 50px;
-          background-color: #242831;
+          background-color: var(--header-background);
           display: flex;
           align-items: center;
           box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.25);
@@ -136,7 +168,7 @@ const Navbar = ({ DesHeight }) => {
           transform: translateX(-50%);
           width: 0;
           height: 2px;
-          background: ${colors.secondary_color};
+          background: var(--primary);
           transition: width 0.3s ease-out;
         }
 
@@ -147,7 +179,7 @@ const Navbar = ({ DesHeight }) => {
 
         .navbar__tab-active.navbar__tab,
         .navbar__tab:hover {
-          color: ${colors.secondary_color};
+          color: var(--primary);
         }
 
         @media only screen and (max-width: 767px) {
