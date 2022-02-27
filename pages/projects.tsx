@@ -12,10 +12,8 @@ export default function vast() {
   console.log(currentHeight);
 
   return (
-    <>
-      <Layout descriptionText={ProjectPage()}>
-        <h1>projects</h1>
-      </Layout>
-    </>
+    <Layout descriptionText={ProjectPage()}>
+      <h1>projects</h1>
+    </Layout>
   );
 }

@@ -24,7 +24,6 @@ const Description = ({ descriptionOutput, descriptionHeight }) => {
       <div ref={myRef} id="container" className={style.container}>
         {descriptionOutput}
       </div>
-      ;
     </div>
   );
 };

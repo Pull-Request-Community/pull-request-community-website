@@ -11,7 +11,7 @@ const BasicButton = ({ children, className }: BasicButtonProps) => {
           color: white;
           font-size: 1.6rem;
           border: none;
-          border-radius: 16%/50%;
+          border-radius: 64px;
           background-color: ${colors.secondary_color};
           display: flex;
           align-items: center;
