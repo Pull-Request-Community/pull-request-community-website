@@ -10,6 +10,8 @@
   "dependencies": {
     "@mdi/js": "^5.6.55",
     "@mdi/react": "^1.4.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.12",
     "next": "^11.0.0",
     "next-themes": "^0.1.1",
     "react": "^17.0.2",

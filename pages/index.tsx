@@ -29,7 +29,7 @@ export default function Home({ people }: IHomeProps) {
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
-      people: randomShuffle(getPeople()),
+      people: randomShuffle<IPerson>(getPeople()),
     },
   };
 };
