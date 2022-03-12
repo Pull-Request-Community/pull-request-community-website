@@ -10,9 +10,10 @@
   font-size: 3.5rem;
   background-color: var(--background-description);
   box-shadow: 0 0 10px 5px rgb(0, 0, 0, 0.2);
-  padding: 25px 25px 100px;
+  padding: 80px 25px 100px;
   position: relative;
   margin-bottom: -30px;
+  z-index: -1;
   gap: 20px;
 }
 

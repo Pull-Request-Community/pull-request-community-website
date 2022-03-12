@@ -39,6 +39,12 @@ const SocialButton = ({ children, className }: BasicButtonProps) => {
         .SocialButton:hover {
           filter: brightness(1.2);
         }
+        @media only screen and (max-width: 600px) {
+          .SocialButton {
+            max-height: 48px;
+            max-width: 48px;
+          }
+        }
       `}</style>
     </>
   );
