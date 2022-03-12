@@ -1,10 +1,10 @@
-import { marked } from 'marked';
 import { useRouter } from 'next/router';
 import Layout from '../../components/layout/layout';
 import { getArticle, getArticleFileList, removeArticleNameExtension } from '../../utils/articles';
 
 export default function Article({ content, data }) {
   const router = useRouter();
+  const marked = require('marked');
   if (router.isFallback) {
     return <div>Loading</div>;
   }
