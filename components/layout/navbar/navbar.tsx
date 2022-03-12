@@ -9,13 +9,27 @@ import colors from '../../../styles/colors';
 import { useRouter } from 'next/router';
 import SocialNetworks from '../../socialNetworks/socialNetworks';
 import { mobile } from '../../../utils/mediaQueries';
+import { useEffect, useState } from 'react';
 
-const paths = [];
-
-const Navbar = () => {
+const Navbar = ({ DesHeight }) => {
   const { asPath } = useRouter();
   const isMobile = useMediaQuery({ query: mobile });
+  const [className, setClassName] = useState('navbar__logo');
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      if (window.pageYOffset >= DesHeight - 50) {
+        setClassName('navbar__logo small');
+      }
+      if (window.pageYOffset <= DesHeight - 50) {
+        setClassName('navbar__logo');
+      }
+    };
+    window.addEventListener('scroll', scrollHandler);
+
+    return () => window.removeEventListener('scroll', scrollHandler);
+  }, [DesHeight]);
 
   return (
     <div className="navbar">
@@ -62,17 +76,17 @@ const Navbar = () => {
             </a>
           </BasicButton>
         </div>
-        <div className="navbar__wrapper">
-          <Link shallow href="/">
-            <a className="logo__wrapper">
-              <img className="navbar__logo" src="/images/logo.png" />
-            </a>
-          </Link>
-        </div>
+        <Link shallow href="/">
+          <a className={className}>
+            <img className="inner-logo" src="/images/logo-2.0.svg" />
+          </a>
+        </Link>
       </div>
 
       <style jsx>{`
         .navbar {
+          position: fixed;
+          z-index: 100;
           color: white;
           height: 50px;
           background-color: var(--header-background);
@@ -110,13 +124,33 @@ const Navbar = () => {
           font-weight: bold;
         }
 
+        .inner-logo {
+          width: inherit;
+          height: inherit;
+          transform: rotate(45deg);
+          transition: transform 0.3s linear;
+        }
+
         .navbar__logo {
-          position: relative;
-          top: 25px;
-          left: -15px;
-          z-index: 1;
-          width: 82px;
-          height: 82px;
+          margin-top: 52px;
+          background: linear-gradient(180deg, #01007d 0%, #832ec6 47.92%, #dc665e 100%);
+          width: 74px;
+          height: 74px;
+          border-radius: 10px;
+          transform: rotate(-45deg);
+          transition: all 0.3s linear;
+        }
+
+        .navbar__logo.small {
+          margin-top: 0px;
+          width: 36px;
+          height: 36px;
+          border-radius: 6px;
+          transform: rotate(0deg);
+        }
+
+        .navbar__logo.small .inner-logo {
+          transform: rotate(0deg);
         }
 
         .navbar__title {
@@ -179,6 +213,14 @@ const Navbar = () => {
 
           .navbar__btn > span {
             font-size: 1.8rem;
+          }
+          .navbar__logo {
+            margin: 48px 0 0 -10px;
+            width: 68px;
+            height: 68px;
+          }
+          .navbar__logo.small {
+            margin: 0;
           }
         }
       `}</style>
