@@ -3,7 +3,7 @@ Thank you, it is not obvious that you are devoting your time to contributing to 
 
 To make your experience as pleasant and easy as possible, please follow this guide.
 
-## The ways you can contribute to the Pull Request Wibsite:
+## The ways you can contribute to the Pull Request Website:
 * Open an [new issue](https://github.com/Pull-Request-Community/pull-request-community-website/issues/new) with a bug or a feature proposal.
 * Add documentaion.
 * Improve our tests.
