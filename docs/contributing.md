@@ -4,7 +4,7 @@ We appreciate it very much.❤️🙏🏻
 
 Before jumping into the deep water, it's essential to discuss a bit of communication.
 One of the biggest challenges on each project (especially on open-source projects) is communication.
-Good communication can lead to great achievements, effective teamwork, and time efficiency and make the working process fun and easy.
+Good communication can lead to great achievements, effective teamwork, time efficiency and make the working process fun and easy.
 It is important to remember that all contributions are made voluntarily by people that devote their time and hard work. We are all part of a team, so *please be passionate and polite to each other*.
 
 Please follow this guide to make your experience as pleasant and easy as possible.
@@ -16,19 +16,19 @@ Please follow this guide to make your experience as pleasant and easy as possibl
 * Solving an issue or adding a new feature.
 
 ## The Preferred Way To Contribute:
-1. Pick an issue from the [issues list](https://github.com/Pull-Request-Community/pull-request-community-website/issues) or [open a new issue](https://github.com/Pull-Request-Community/pull-request-community-website/issues/new) and *ask*, by writing a new comment on the issue's page, to take the task.
-2. Wait for the maintainer's approval. Keep in mind that they may not approve it. Like we said at the start, communication is everything.
+1. Pick an issue from the [issues list](https://github.com/Pull-Request-Community/pull-request-community-website/issues) or [open a new issue](https://github.com/Pull-Request-Community/pull-request-community-website/issues/new) and *ask*, by writing a new comment on the issue's page, to own the task.
+2. Wait for the maintainer's ownership approval. Keep in mind that they may not approve that. Like we said at the beggining, communication is everything.
 3. Fork the project. For more details, please read this article: [My first contribution to open source: Make a fork of the repo / Galen Corey](https://opensource.com/article/19/11/first-open-source-contribution-fork-clone).
 4. Clone the forked project to your local machine (see instructions below).
 5. Try to brake the task into subtasks.
 6. Open a new branch (see instructions below).
 7. While working on an issue, feel free to ask any questions on the issue's page.
-8. Open pull request (make sure you open the PR on the original project).
+8. Open pull request (make sure you open the pull requset on the original project and not on the forked project).
 9. Make sure all the tests are passing.
 10. Merge to the *main* branch.
 
 ## Working On Issue: 
-Having a clear chronic of code development can be very useful. Therefore, please work on branches that are linked to a relevant issue. 
+Having a clear work flow of code development can be very useful. Therefore, please work on branches that are linked to a relevant issue. 
 Don't you know how to connect a branch to an issue? no problem, follow this [guid](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-a-branch-for-an-issue).
  
 ## Developing In A Branch:
