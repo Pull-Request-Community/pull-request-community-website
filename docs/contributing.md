@@ -9,9 +9,17 @@ To make your experience as pleasant and easy as possible, please follow this gui
 * Improve our tests.
 * Solve an issue or add a feature - feel free to choose an issue from the [open issues list](https://github.com/Pull-Request-Community/pull-request-community-website/issues) and ask to take it.
 
-## Clone the project to your local machine:
-You can clone the project directly to your local machine and see the codebase. However, in this way, you can't open a PR. SO, if you want to contribute, please clone a force of this project.
-For more details, read this article: [My first contribution to open source: Make a fork of the repo / Galen Corey](https://opensource.com/article/19/11/first-open-source-contribution-fork-clone)
+## The preferred way to contribute:
+1. Pick issue from the [issues list](https://github.com/Pull-Request-Community/pull-request-community-website/issues) or [open new issue](https://github.com/Pull-Request-Community/pull-request-community-website/issues/new) and *ask* in the comment to take the task.
+2. Wait for the maintainer's approval. Keep in mind that they do not have to approve it for you. Like we said at the start, communication is everything.
+3. Fork the project. For more details, read this article: [My first contribution to open source: Make a fork of the repo / Galen Corey](https://opensource.com/article/19/11/first-open-source-contribution-fork-clone).
+4. Clone the forked project to your local machine (see instructions below). 
+5. Try to brake the task to subtasks.
+6. Open branch (see instructions below).
+7. Work on the issue, feel free to ask any questions you want in the issue.
+8. Open pull request (make sure you open the PR to the original project).
+9. Make sure all the tests pass.
+10. Merge to master.
 
 ## Working on issue:
 Communication is the most difficult problem in open source, so please don't work freestyle. 
@@ -24,7 +32,6 @@ Please make sure you follow this list:
 2) Create a meaningful names for commits.
 3) Create small commits that connect one logic unit at a time.
 4) Use [tasks list](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-task-lists) to manage your work.
-
 
 
 
