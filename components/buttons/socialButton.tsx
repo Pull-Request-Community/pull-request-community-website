@@ -1,4 +1,3 @@
-import colors from '../../styles/colors';
 
 const SocialButton = ({ children, className }: BasicButtonProps) => {
   return (

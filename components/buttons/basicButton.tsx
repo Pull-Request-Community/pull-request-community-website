@@ -1,4 +1,3 @@
-import colors from '../../styles/colors';
 
 const BasicButton = ({ children, className }: BasicButtonProps) => {
   return (

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import style from './description.module.scss';
-import colors from '../../styles/colors';
 
 const Description = ({ descriptionOutput, descriptionHeight }) => {
   const myRef = useRef(null);
