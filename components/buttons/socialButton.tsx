@@ -1,4 +1,3 @@
-
 const SocialButton = ({ children, className }: BasicButtonProps) => {
   return (
     <>
@@ -23,16 +22,16 @@ const SocialButton = ({ children, className }: BasicButtonProps) => {
           box-sizing: border-box;
         }
         .telegram {
-          background-color: ${colors.telegram};
+          background-color: #0088cc;
         }
         .facebook {
-          background-color: ${colors.facebook};
+          background-color: #3b5998;
         }
         .discord {
-          background-color: ${colors.discord};
+          background-color: #7289da;
         }
         .newsletter {
-          background-color: ${colors.newsletter};
+          background-color: #3b5998;
         }
 
         .SocialButton:hover {

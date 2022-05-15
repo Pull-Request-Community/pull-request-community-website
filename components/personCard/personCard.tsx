@@ -34,7 +34,7 @@ export function PersonCard({ person }: IPersonProps) {
     roles,
     customImage,
   } = person;
-  const theme = useMemo(() => themeColor ?? colors.secondary_color, []);
+  const theme = useMemo(() => themeColor || '#000000', []);
   const icons = useMemo(
     () => [
       { link: github, icon: mdiGithub },

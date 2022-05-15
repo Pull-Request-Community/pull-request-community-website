@@ -5,7 +5,6 @@ import Icon from '@mdi/react';
 import Title from '../../typography/title';
 import { useTheme } from 'next-themes';
 import BasicButton from '../../buttons/basicButton';
-import colors from '../../../styles/colors';
 import { useRouter } from 'next/router';
 import SocialNetworks from '../../socialNetworks/socialNetworks';
 import { mobile } from '../../../utils/mediaQueries';
