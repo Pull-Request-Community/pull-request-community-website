@@ -15,6 +15,7 @@ const Navbar = ({ DesHeight }) => {
   const { asPath } = useRouter();
   const isMobile = useMediaQuery({ query: mobile });
   const [className, setClassName] = useState('navbar__logo');
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -30,6 +31,11 @@ const Navbar = ({ DesHeight }) => {
 
     return () => window.removeEventListener('scroll', scrollHandler);
   }, [DesHeight]);
+
+  // When mounted on client, now we can show the UI
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <div className="navbar">
