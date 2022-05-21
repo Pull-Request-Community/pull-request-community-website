@@ -38,4 +38,18 @@ Please make sure you follow this list:
 3) Create small commits for each logic unit at a time.
 4) Use a [tasks list](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-task-lists) to manage your work.
 
+## TSX Specifications:
+Please follow this functional component pattern:
+```
+interface Props {
+  prop: <type>
+  ...
+}
+
+export const Component = (props: Props): ReactElement => {
+  const { prop, ... } = props;
+  ...
+}
+```
+
 We hope you will have a great time contributing to this project.
