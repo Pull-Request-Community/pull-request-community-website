@@ -1,0 +1,40 @@
+.SocialButton {
+  user-select: none;
+  cursor: pointer;
+  color: white;
+  font-size: 2.4rem;
+  border: none;
+  border-radius: 100%;
+  padding: 10px 0;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 1, 1);
+  max-height: 36px;
+  max-width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.telegram {
+  background-color: #0088cc;
+}
+.facebook {
+  background-color: #1778f2;
+}
+.discord {
+  background-color: #7289da;
+}
+.newsletter {
+  background-color: #808080;
+}
+
+.SocialButton:hover {
+  filter: brightness(1.2);
+}
+@media only screen and (max-width: 600px) {
+  .SocialButton {
+    max-height: 48px;
+    max-width: 48px;
+  }
+}
