@@ -7,10 +7,10 @@
   height: max-content;
   display: flex;
   flex-direction: column;
-  font-size: 3.5rem;
+  font-size: 1.6rem; // Based on 10px.
   background-color: var(--background-description);
   box-shadow: 0 0 10px 5px rgb(0, 0, 0, 0.2);
-  padding: 80px 25px 100px;
+  padding: 95px 25px 100px;
   position: relative;
   margin-bottom: -30px;
   gap: 20px;
@@ -20,5 +20,7 @@
   .container {
     justify-content: center;
     flex-wrap: wrap;
+    padding: 106px 25px 64px;
+    font-size: 1.556rem; // Based on 9px.
   }
 }

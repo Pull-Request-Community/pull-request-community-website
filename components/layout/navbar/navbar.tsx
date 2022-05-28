@@ -2,14 +2,13 @@ import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
 import { mdiGithub } from '@mdi/js';
 import Icon from '@mdi/react';
-import Title from '../../typography/title';
 import { useTheme } from 'next-themes';
 import BasicButton from '../../buttons/basicButton';
-import colors from '../../../styles/colors';
 import { useRouter } from 'next/router';
 import SocialNetworks from '../../socialNetworks/socialNetworks';
 import { mobile } from '../../../utils/mediaQueries';
 import { useEffect, useState } from 'react';
+import styles from './navbar.module.scss';
 
 const Navbar = ({ DesHeight }) => {
   const { asPath } = useRouter();
@@ -44,7 +43,7 @@ const Navbar = ({ DesHeight }) => {
           <button
             aria-label="Toggle Dark Mode"
             type="button"
-            className="toggle-dark-mode"
+            className={styles.toggleDarkMode}
             onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
           >
             <svg
@@ -106,6 +105,7 @@ const Navbar = ({ DesHeight }) => {
           display: flex;
           align-items: center;
           justify-content: center;
+          gap: 4px;
         }
 
         .navbar__container {

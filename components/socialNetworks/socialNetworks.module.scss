@@ -3,12 +3,9 @@
 .social {
   &__list {
     display: flex;
-    gap: 0.25rem;
+    gap: 4px;
     list-style: none;
     max-height: 50px;
-    li {
-      margin-left: 1em;
-    }
   }
   &__btn {
     color: #fff;
