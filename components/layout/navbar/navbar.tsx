@@ -125,9 +125,6 @@ const Navbar = ({ DesHeight }) => {
           align-items: center;
           gap: 10px;
           white-space: nowrap;
-        }
-
-        .navbar__btn > span {
           font-weight: bold;
         }
 
