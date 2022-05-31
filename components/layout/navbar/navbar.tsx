@@ -16,7 +16,7 @@ const Navbar = ({ DesHeight }) => {
   const isMobile = useMediaQuery({ query: mobile });
   const [className, setClassName] = useState('navbar__logo');
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -45,7 +45,7 @@ const Navbar = ({ DesHeight }) => {
             aria-label="Toggle Dark Mode"
             type="button"
             className="toggle-dark-mode"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ const Navbar = ({ DesHeight }) => {
               stroke="currentColor"
               style={{ height: '24px', width: '24px' }}
             >
-              {theme === 'dark' ? (
+              {resolvedTheme === 'dark' ? (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
