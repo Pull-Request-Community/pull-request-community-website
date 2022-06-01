@@ -18,7 +18,7 @@ const BasicButton = ({ children, className }: BasicButtonProps) => {
           justify-content: center;
           padding: 6px 12px 6px 6px;
           transition: all 0.3s;
-          min-width: 126px;
+          width: 126px;
           height: 36px;
         }
 

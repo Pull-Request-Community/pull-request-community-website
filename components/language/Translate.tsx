@@ -6,7 +6,7 @@ interface TranslateProps {
   translationKey: string;
 }
 
-const Translate = ({ translationKey }: TranslateProps) => {
+const Translate = ({ translationKey }) => {
   return <span className={style.breakLine}> {useTranslator(translationKey)} </span>;
 };
 
