@@ -1,9 +1,0 @@
-{
-  "$schema": "../schemas/people-schema.json",
-  "name": "עומרי בר-זיק",
-  "github": "omribarzik",
-  "linkedin": "https://www.linkedin.com/in/omri-bar-zik/",
-  "twitter": "https://twitter.com/omri_barzik",
-  "stackoverflow": "https://stackoverflow.com/users/7969810/omri-barzik",
-  "description": "מפתח תשתיות פרונטאד עם אהבה גדולה לדוקר, אופטימיזציה בCI וכל מה שקשור לטרמינל שלך"
-}
