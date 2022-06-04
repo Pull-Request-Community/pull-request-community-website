@@ -20,10 +20,8 @@ const Description = ({ descriptionOutput, descriptionHeight }) => {
   }, [myRef]);
 
   return (
-    <div>
-      <div ref={myRef} id="container" className={style.container}>
-        {descriptionOutput}
-      </div>
+    <div ref={myRef} id="container" className={style.container}>
+      {descriptionOutput}
     </div>
   );
 };
