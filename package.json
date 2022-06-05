@@ -33,13 +33,10 @@
     }
   },
   "lint-staged": {
-    "data/people/*.{json}": [
-      "prettier --write",
-      "git add"
+    "people/*.json": [
+      "prettier --write"
     ],
     "**/*.{ts,tsx,md,scss}": [
-      "prettier --write",
-      "git add"
-    ]
+      "prettier --write"    ]
   }
 }
