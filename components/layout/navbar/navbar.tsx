@@ -9,7 +9,7 @@ import SocialNetworks from '../../socialNetworks/socialNetworks';
 import { mobile } from '../../../utils/mediaQueries';
 import { useEffect, useState } from 'react';
 import styles from './navbar.module.scss';
-import { useTranslator } from '../../../language/useTranslator';
+import { useTranslator } from '../../language/useTranslator';
 
 const Navbar = ({ DesHeight }) => {
   const { asPath } = useRouter();
