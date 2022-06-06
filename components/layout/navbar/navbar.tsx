@@ -9,6 +9,7 @@ import SocialNetworks from '../../socialNetworks/socialNetworks';
 import { mobile } from '../../../utils/mediaQueries';
 import { useEffect, useState } from 'react';
 import styles from './navbar.module.scss';
+import { useTranslator } from '../../../language/useTranslator';
 
 const Navbar = ({ DesHeight }) => {
   const { asPath } = useRouter();
@@ -76,7 +77,7 @@ const Navbar = ({ DesHeight }) => {
               className="navbar__btn"
               href="https://github.com/MichalPorag/pull-request-community#adding-your-profile"
             >
-              <span>הוסיפו אותי</span>{' '}
+              <span>{useTranslator('navbar.add_me')}</span>{' '}
               <Icon style={{ width: '24px' }} className="navbar__btn--icon" path={mdiGithub} />
             </a>
           </BasicButton>
