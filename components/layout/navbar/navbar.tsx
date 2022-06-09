@@ -10,6 +10,7 @@ import { mobile } from '../../../utils/mediaQueries';
 import { useEffect, useState } from 'react';
 import styles from './navbar.module.scss';
 import { useTranslator } from '../../language/useTranslator';
+import languageFile from './navbar.language.json';
 
 const Navbar = ({ DesHeight }) => {
   const { asPath } = useRouter();
@@ -77,7 +78,7 @@ const Navbar = ({ DesHeight }) => {
               className="navbar__btn"
               href="https://github.com/MichalPorag/pull-request-community#adding-your-profile"
             >
-              <span>{useTranslator('navbar.add_me')}</span>{' '}
+              <span>{useTranslator('add_me', languageFile)}</span>{' '}
               <Icon style={{ width: '24px' }} className="navbar__btn--icon" path={mdiGithub} />
             </a>
           </BasicButton>

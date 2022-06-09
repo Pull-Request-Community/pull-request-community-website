@@ -1,5 +1,3 @@
-import languageHE from './languages/he.json';
-
-export const useTranslator = (key: string): string => {
-  return languageHE[key] || key;
+export const useTranslator = (key: string, languageFile): string => {
+  return languageFile[key] || key;
 };
