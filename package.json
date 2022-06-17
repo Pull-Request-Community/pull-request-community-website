@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run open-browser & next dev",
+    "open-browser": "open http://localhost:3000",
     "build": "next build",
     "start": "next start"
   },
@@ -33,13 +34,10 @@
     }
   },
   "lint-staged": {
-    "data/people/*.{json}": [
-      "prettier --write",
-      "git add"
+    "people/*.json": [
+      "prettier --write"
     ],
     "**/*.{ts,tsx,md,scss}": [
-      "prettier --write",
-      "git add"
-    ]
+      "prettier --write"    ]
   }
 }
