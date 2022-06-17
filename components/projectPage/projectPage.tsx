@@ -1,13 +1,27 @@
 import React from 'react';
 import Technologies from './technologies/Technologies';
 import style from './ProjectPage.module.scss';
-
-function ProjectsPage() {
+/**
+ *
+ * @param FullInfo
+ * @returns
+ */
+function ProjectsPage({
+  stars,
+  license,
+  languages,
+  projectname,
+}: {
+  stars: number;
+  license: string;
+  languages: any;
+  projectname: string;
+}) {
   return (
     <div className={style.descriptionContainer}>
       <h3 className={style.title}>
-        <div className={style.star} />
-        Vest
+        <div data-stars={stars} className={style.star} />
+        {projectname}
       </h3>
       <p dir="auto" className={style.description}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -21,8 +35,8 @@ function ProjectsPage() {
       </p>
 
       <div className={style.infoContainer}>
-        <Technologies />
-        <div className={style.license}>Mozilla Public License 2.0</div>
+        <Technologies lang={languages} />
+        <div className={style.license}>{license}</div>
       </div>
     </div>
   );

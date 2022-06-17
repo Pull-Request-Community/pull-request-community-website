@@ -35,7 +35,7 @@ const Layout = ({ children, descriptionText }: LayoutProps) => {
 };
 
 interface LayoutProps {
-  children: object;
+  children?: object;
   descriptionText?: object;
 }
 
