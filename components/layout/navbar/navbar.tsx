@@ -104,6 +104,7 @@ const Navbar = ({ DesHeight }) => {
           align-items: center;
           box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.25);
           width: 100%;
+          top: 0;
         }
 
         .navbar__wrapper {
