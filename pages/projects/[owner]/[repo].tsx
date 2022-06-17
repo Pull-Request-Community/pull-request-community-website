@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import Layout from '../../../components/layout/layout';
 import ProjectPage from '../../../components/projectPage/projectPage';
 import { GetServerSideProps } from 'next';
-import { Octokit } from 'octokit';
+import { getOctokit } from '../../../services/github';
 
-const octokit = new Octokit({ auth: process.env.GITHUB_API_KEY || '' });
+const octokit = getOctokit();
 
 function project(props) {
   const projectFullInfo = {
