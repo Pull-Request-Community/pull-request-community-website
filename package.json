@@ -6,7 +6,8 @@
     "dev": "npm run open-browser & next dev",
     "open-browser": "open http://localhost:3000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@mdi/js": "^5.6.55",
@@ -22,21 +23,17 @@
   "devDependencies": {
     "@types/node": "^14.11.2",
     "@types/react": "^16.9.50",
-    "husky": "^4.3.0",
+    "husky": "^8.0.0",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "typescript": "^4.3.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "people/*.json": [
       "prettier --write"
     ],
     "**/*.{ts,tsx,md,scss}": [
-      "prettier --write"    ]
+      "prettier --write"
+    ]
   }
 }
