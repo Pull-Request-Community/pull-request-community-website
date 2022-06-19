@@ -8,10 +8,9 @@
   margin: 0 auto;
   max-width: 1280px;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 768px) {
     justify-content: center;
     flex-wrap: wrap;
-    font-size: 1.556rem; // Based on 9px.
     padding: 72px 24px 114px;
     margin: 0 auto;
   }
