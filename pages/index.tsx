@@ -13,10 +13,12 @@ interface IHomeProps {
 export default function Home({ people }: IHomeProps) {
   return (
     <Layout descriptionText={MainPageDescription()}>
-      <div className={styles.cards__wrapper}>
-        {people.map((person, i) => (
-          <PersonCard key={person.name + i} person={person} />
-        ))}
+      <div className={styles.container}>
+        <div className={styles.cards__wrapper}>
+          {people.map((person, i) => (
+            <PersonCard key={person.name + i} person={person} />
+          ))}
+        </div>
       </div>
     </Layout>
   );
