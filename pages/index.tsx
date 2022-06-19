@@ -1,5 +1,4 @@
 import { GetStaticProps } from 'next';
-import Description from '../components/description/Description';
 import Layout from '../components/layout/layout';
 import { PersonCard } from '../components/personCard/personCard';
 import { getPeople, IPerson } from '../services/people';
@@ -14,12 +13,10 @@ interface IHomeProps {
 export default function Home({ people }: IHomeProps) {
   return (
     <Layout descriptionText={MainPageDescription()}>
-      <div className={styles.container}>
-        <div className={styles.cards__wrapper}>
-          {people.map((person, i) => (
-            <PersonCard key={person.name + i} person={person} />
-          ))}
-        </div>
+      <div className={styles.cards__wrapper}>
+        {people.map((person, i) => (
+          <PersonCard key={person.name + i} person={person} />
+        ))}
       </div>
     </Layout>
   );
