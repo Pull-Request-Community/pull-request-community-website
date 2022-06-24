@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/dist/shared/lib/router/router';
 import '../styles/globals.scss';
+import {wrapper} from '../store/store';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -10,4 +11,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);

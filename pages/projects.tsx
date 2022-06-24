@@ -1,15 +1,13 @@
-import next from 'next';
-import React, { useState } from 'react';
-import Description from '../components/description/Description';
-import Navbar from '../components/layout/navbar/navbar';
-import style from '../styles/projects.module.scss';
+import React, {useState} from 'react';
 import ProjectPage from '../components/projectPage/projectPage';
-import Footer from '../components/layout/footer/footer';
 import Layout from '../components/layout/layout';
+import {wrapper} from "../store/store";
+import {receivedProjects} from "../store/projectsSlice";
+import {getUsers} from "../services/user";
 
-export default function vast() {
+export default function vast(props) {
   const [currentHeight, setCurrentHeight] = useState(0);
-  console.log(currentHeight);
+  console.log(props);
 
   return (
     <Layout descriptionText={ProjectPage()}>
@@ -17,3 +15,12 @@ export default function vast() {
     </Layout>
   );
 }
+
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) =>
+    async (context) => {
+      const data = await getUsers();
+      store.dispatch(receivedProjects(data));
+      return { props: { projects: store.getState() } };
+    }
+)
