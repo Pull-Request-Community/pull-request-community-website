@@ -35,7 +35,7 @@ export function PersonCard({ person }: IPersonProps) {
     roles,
     customImage,
   } = person;
-  const theme = useMemo(() => themeColor ?? colors.secondary_color, []);
+  const theme = useMemo(() => themeColor ?? colors.secondary_color, [themeColor]);
   const icons = useMemo(
     () => [
       { link: github, icon: mdiGithub },
@@ -46,6 +46,7 @@ export function PersonCard({ person }: IPersonProps) {
       { link: mastodon, icon: mdiMastodon },
       { link: stackoverflow, icon: mdiStackOverflow },
     ],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [person]
   );
 
@@ -91,6 +92,7 @@ export function PersonCard({ person }: IPersonProps) {
                   target="_blank"
                   key={link}
                   href={link.startsWith('https://') ? link : `https://github.com/${link}`}
+                  rel="noreferrer"
                 >
                   <Icon className="icon" path={icon} style={{ color: theme }} />
                 </a>

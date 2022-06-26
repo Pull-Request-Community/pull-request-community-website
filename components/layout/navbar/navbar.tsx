@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Img from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 import { mdiGithub } from '@mdi/js';
 import Icon from '@mdi/react';
@@ -18,6 +19,8 @@ const Navbar = ({ DesHeight }) => {
   const [className, setClassName] = useState('navbar__logo');
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
+
+  const addMeTranslate = useTranslator('add_me', languageFile);
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -78,14 +81,14 @@ const Navbar = ({ DesHeight }) => {
               className="navbar__btn"
               href="https://github.com/MichalPorag/pull-request-community#adding-your-profile"
             >
-              <span>{useTranslator('add_me', languageFile)}</span>{' '}
+              <span>{addMeTranslate}</span>{' '}
               <Icon style={{ width: '24px' }} className="navbar__btn--icon" path={mdiGithub} />
             </a>
           </BasicButton>
         </div>
         <Link shallow href="/">
           <a className={className}>
-            <img className="inner-logo" src="/images/logo-2.0.svg" />
+            <Img className="inner-logo" src="/images/logo-2.0.svg" />
           </a>
         </Link>
       </div>

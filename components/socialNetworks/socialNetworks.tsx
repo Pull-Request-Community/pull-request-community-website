@@ -39,7 +39,13 @@ const SocialNetworks = ({ className = '' }) => {
         return (
           <li key={uuidv4()}>
             <SocialButton className={item.name}>
-              <a className={styles.social__btn} href={item.url} title={item.name} target="_blank">
+              <a
+                className={styles.social__btn}
+                href={item.url}
+                title={item.name}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Icon className={styles.social__btn__icon} path={item.icon} />
               </a>
             </SocialButton>
