@@ -11,7 +11,6 @@ import {
 import Icon from '@mdi/react';
 import { IPerson } from '../../services/people';
 import styles from './personCard.module.scss';
-import colors from '../../styles/colors';
 import ShowMore from '../showMore/showMore';
 import Label from '../label/label';
 
@@ -35,7 +34,7 @@ export function PersonCard({ person }: IPersonProps) {
     roles,
     customImage,
   } = person;
-  const theme = useMemo(() => themeColor ?? colors.secondary_color, []);
+  const theme = useMemo(() => themeColor ?? 'var(--primary)', []);
   const icons = useMemo(
     () => [
       { link: github, icon: mdiGithub },
