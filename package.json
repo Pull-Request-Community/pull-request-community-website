@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run open-browser & next dev",
-    "open-browser": "open http://localhost:3000",
+    "dev": "npm run open-browser && next dev",
+    "open-browser": "node ./scripts/open-browser.js",
     "build": "next build",
     "start": "next start",
     "prepare": "husky install",
