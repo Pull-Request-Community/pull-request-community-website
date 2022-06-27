@@ -1,4 +1,4 @@
-name: Validate JSONs on PR
+name: Tests
 on: [pull_request]
 jobs:
   validate_schemas:
