@@ -6,7 +6,7 @@
     "dev": "npm run open-browser && next dev",
     "open-browser": "node ./scripts/open-browser.js",
     "build": "next build",
-    "start": "npm build && next start",
+    "start": "npm run build && next start",
     "prepare": "husky install",
     "lint": "next lint",
     "test:e2e": "playwright test"
