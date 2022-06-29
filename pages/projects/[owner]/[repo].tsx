@@ -15,7 +15,11 @@ function project(props: githubFullinfo) {
     projectname: props.projectname,
   };
 
-  return <Layout descriptionText={ProjectPage(projectFullInfo)}></Layout>;
+  return (
+    <Layout descriptionText={ProjectPage(projectFullInfo)}>
+      <></>
+    </Layout>
+  );
 }
 
 export default project;
