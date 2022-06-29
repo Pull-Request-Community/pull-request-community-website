@@ -3,30 +3,26 @@ import Layout from '../../../components/layout/layout';
 import ProjectPage from '../../../components/projectPage/projectPage';
 import { GetServerSideProps } from 'next';
 import { getOctokit } from '../../../services/github';
+import githubFullinfo from '../../../components/projectPage/ProjectPage.model';
 
 const octokit = getOctokit();
 
-function project(props) {
+function project(props: githubFullinfo) {
   const projectFullInfo = {
     stars: props.stars,
     license: props.license,
-    languages: props.langarr,
+    languages: props.languages,
     projectname: props.projectname,
   };
 
-  return (
-    <>
-      <Layout descriptionText={ProjectPage(projectFullInfo)} />
-    </>
-  );
+  return <Layout descriptionText={ProjectPage(projectFullInfo)}></Layout>;
 }
 
 export default project;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { owner, repo } = context.params;
-  let repoInfo;
-  let langInfo;
+  let repoInfo, langInfo;
 
   try {
     const data = await octokit.rest.repos.get({ owner: owner as string, repo: repo as string });
@@ -56,25 +52,19 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     return stars.toString();
   }
 
-  const langarr = [];
+  const languages: object[] = [];
   for (const lang in langInfo) {
     const obj = {};
     obj[lang] = langInfo[lang];
-    console.log(obj);
-
-    langarr.push(obj);
+    languages.push(obj);
   }
-  langarr.sort((a, b) => b[Object.keys(b)[0]] - a[Object.keys(a)[0]]);
-
-  if (langarr.length > 3) {
-    langarr.length = 3;
-  }
+  languages.sort((a, b) => b[Object.keys(b)[0]] - a[Object.keys(a)[0]]);
 
   const stars = formatStars(repoInfo.stargazers_count);
   const license = repoInfo?.license?.name || '';
 
   return {
     // Will be passed to the page component as props.
-    props: { stars, license, langarr, projectname: repo as string },
+    props: { stars, license, languages, projectname: repo as string },
   };
 };

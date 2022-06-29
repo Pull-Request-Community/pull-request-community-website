@@ -1,7 +1,8 @@
 import React from 'react';
+import TechnologiesProps from './Technologies.model';
 import style from './Technologies.module.scss';
 
-function Technologies(props) {
+function Technologies(props: TechnologiesProps) {
   const technologies = props.lang;
 
   return (
