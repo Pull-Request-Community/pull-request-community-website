@@ -20,7 +20,7 @@ interface IPersonProps {
 }
 
 export function PersonCard({ person }: IPersonProps) {
-  const card = useRef();
+  const card = useRef<HTMLDivElement>(null);
   const {
     name,
     description,

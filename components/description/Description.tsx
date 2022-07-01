@@ -1,16 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react';
 import style from './description.module.scss';
 import colors from '../../styles/colors';
+import { NextPage } from 'next';
 
-const Description = ({ descriptionOutput, descriptionHeight }) => {
-  const myRef = useRef(null);
+interface Props {
+  descriptionOutput: object | undefined;
+  descriptionHeight: (height: number) => void;
+}
+
+const Description: NextPage<Props> = ({ descriptionOutput, descriptionHeight }) => {
+  const myRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
 
   descriptionHeight(height);
 
   useEffect(() => {
     const handleResize = () => {
-      setHeight(myRef.current.offsetHeight);
+      if (myRef.current) setHeight(myRef.current.offsetHeight);
     };
     window.addEventListener('resize', handleResize);
     handleResize();

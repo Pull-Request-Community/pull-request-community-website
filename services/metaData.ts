@@ -1,10 +1,10 @@
 import metaData from '../static/metadata';
 
-export const getMetaData = (route): MetaData => {
+export const getMetaData = (route: string): MetaData => {
   let meta: MetaData = metaData['/'];
 
   try {
-    meta = metaData[route] ?? meta;
+    meta = (metaData as { [route: string]: MetaData })[route] ?? meta;
   } catch (e) {
     console.error(e);
   }

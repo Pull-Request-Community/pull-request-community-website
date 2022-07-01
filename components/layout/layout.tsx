@@ -24,7 +24,7 @@ const Layout = ({ children, descriptionText }: LayoutProps) => {
       <Navbar DesHeight={currentHeight} />
       <Description
         descriptionOutput={descriptionText}
-        descriptionHeight={(hight) => {
+        descriptionHeight={(hight: number) => {
           setCurrentHeight(hight);
         }}
       />

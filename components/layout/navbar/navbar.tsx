@@ -12,8 +12,9 @@ import { useEffect, useState } from 'react';
 import styles from './navbar.module.scss';
 import { useTranslator } from '../../language/useTranslator';
 import languageFile from './navbar.language.json';
+import { NextPage } from 'next';
 
-const Navbar = ({ DesHeight }) => {
+const Navbar: NextPage<{ DesHeight: number }> = ({ DesHeight }) => {
   const { asPath } = useRouter();
   const isMobile = useMediaQuery({ query: mobile });
   const [className, setClassName] = useState('navbar__logo');
@@ -88,7 +89,7 @@ const Navbar = ({ DesHeight }) => {
         </div>
         <Link shallow href="/">
           <a className={className}>
-            <Img className="inner-logo" src="/images/logo-2.0.svg" />
+            <Img className="inner-logo" src="/images/logo-2.0.svg" height={'100%'} width={'100%'} />
           </a>
         </Link>
       </div>

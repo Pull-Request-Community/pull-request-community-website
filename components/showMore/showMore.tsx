@@ -8,7 +8,7 @@ interface ShowMoreInterface {
   maxCharacter: number;
   mobileMaxCharacter?: number;
   className?: string;
-  onCustomClick?: (arg: boolean, elem: object) => void;
+  onCustomClick?: (arg: boolean, elem: HTMLElement) => void;
 }
 
 const ShowMore = ({
@@ -19,7 +19,7 @@ const ShowMore = ({
   className,
   onCustomClick,
 }: ShowMoreInterface) => {
-  const element = useRef();
+  const element = useRef<HTMLParagraphElement>(null);
   const [showMore, setShowMore] = useState(defaultShowMoreMode);
   const isMobile = useMediaQuery({ query: mobile });
   const currentMaxCharacter = useMemo(() => {
@@ -44,7 +44,7 @@ const ShowMore = ({
   const onToggleContent = () => {
     setShowMore(!showMore);
 
-    onCustomClick && onCustomClick(showMore, element.current);
+    onCustomClick && element.current && onCustomClick(showMore, element.current);
   };
 
   return (
