@@ -28,7 +28,7 @@ Please follow this guide to make your experience as pleasant and easy as possibl
 10. Merge to the *main* branch.
 
 ## Working On Issue: 
-Having a clear work flow of code development can be very useful. Therefore, please work on branches that are linked to a relevant issue.
+Having a clear work flow of code development can be very useful. Therefore, please work on branches that are linked to a relevant issue. 
 Don't you know how to connect a branch to an issue? no problem, follow this [guid](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-a-branch-for-an-issue).
  
 ## Developing In A Branch:
