@@ -2,11 +2,7 @@ import React from 'react';
 import Technologies from './technologies/Technologies';
 import style from './ProjectPage.module.scss';
 import githubFullinfo from './ProjectPage.model';
-/**
- *
- * @param FullInfo
- * @returns
- */
+
 function ProjectsPage({ stars, license, languages, projectname }: githubFullinfo) {
   return (
     <div className={style.descriptionContainer}>

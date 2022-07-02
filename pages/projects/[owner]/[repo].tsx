@@ -17,6 +17,7 @@ function project(props: githubFullinfo) {
 
   return (
     <Layout descriptionText={ProjectPage(projectFullInfo)}>
+      {/* ToDo: Add body to this page */}
       <></>
     </Layout>
   );

@@ -11,7 +11,7 @@ interface IHomeProps {
 
 export default function Articles({ people }: IHomeProps) {
   return (
-    <Layout descriptionText={<></>}>
+    <Layout>
       <div className={styles.container}>Scafolding for article page</div>
     </Layout>
   );
