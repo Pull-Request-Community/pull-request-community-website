@@ -8,7 +8,7 @@ const DescriptionContainer = (props) => {
 
   useEffect(() => {
     descriptionHeight(height);
-  }, [height]);
+  }, [descriptionHeight, height]);
 
   useEffect(() => {
     const handleResize = () => {
