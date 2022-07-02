@@ -12,7 +12,9 @@ const Description: NextPage<Props> = ({ descriptionOutput, descriptionHeight }) 
   const myRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
 
-  descriptionHeight(height);
+  useEffect(() => {
+    descriptionHeight(height);
+  }, [descriptionHeight, height]);
 
   useEffect(() => {
     const handleResize = () => {
