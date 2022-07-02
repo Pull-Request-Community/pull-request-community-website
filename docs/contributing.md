@@ -6,7 +6,7 @@ We appreciate it very much.❤️🙏🏻
 Before jumping into the deep water, it's essential to discuss a bit of communication.
 One of the biggest challenges on each project (especially on open-source projects) is communication.
 Good communication can lead to great achievements, effective teamwork, time efficiency and make the working process fun and easy.
-It is important to remember that all contributions are made voluntarily by people that devote their time and hard work. We are all part of a team, so _please be passionate and polite to each other_.
+It is important to remember that all contributions are made voluntarily by people that devote their time and hard work. We are all part of a team, so *please be passionate and polite to each other*.
 
 Please follow this guide to make your experience as pleasant and easy as possible.
 
