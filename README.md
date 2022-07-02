@@ -58,7 +58,11 @@ You can add / update your personal profile by creating a Pull Request to this re
    and anything that you are passionate about. Are you an architect? Do you speak Chinese? Studied amusement park
    and roller coaster engineering? This is the place to brag!
 
-2. By default, we'll use your GitHub photo. There's currently an [open issue](https://github.com/urish/pull-request-community/issues/78) to allow custom profile photos.
+2. By default, we'll use your GitHub photo. If you don't have a GitHub profile photo,
+   or want to use a different one, add it under [public/images/people](public/images/people) in jpeg format.
+   Use your GitHub username for the image, e.g. `MichalPorag.jpg`.
+
+   Then, add `"customImage": true` to your profile JSON that you created in the previous step.
 
 3. Create a pull request with new files.
 
