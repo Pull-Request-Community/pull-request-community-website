@@ -84,6 +84,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-# Contributing to the project:
 
+
+# Contributing to the project: 
 If you are interested in contributing to the project, please follow this [guide](https://github.com/Pull-Request-Community/pull-request-community-website/blob/master/docs/contributing.md).
