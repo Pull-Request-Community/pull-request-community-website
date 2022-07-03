@@ -76,7 +76,7 @@ const Navbar = ({ DesHeight }) => {
             </svg>
           </button>
           {!isMobile && <SocialNetworks />}
-          <BasicButton>
+          <BasicButton className='addMeButton'>
             <a
               className="navbar__btn"
               href="https://github.com/MichalPorag/pull-request-community#adding-your-profile"
