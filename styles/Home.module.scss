@@ -2,18 +2,17 @@
 
 .cards__wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 1fr;
   gap: 30px 45px;
   justify-items: center;
   margin-bottom: 100px;
   max-width: 1280px;
-  margin: -24px auto 0 auto;
+  margin: -24px auto 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1280px) {
   .cards__wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 0 25px;
   }
 }
