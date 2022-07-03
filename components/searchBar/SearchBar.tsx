@@ -20,6 +20,9 @@ const SearchBar = (props: Props): ReactElement => {
   const { handelSearch, placeholder } = props;
 
   const debounceHandler = useCallback(debounce(handelSearch, 1000), []);
+  const placeholderText = placeholder
+    ? placeholder
+    : useTranslator('searchPlaceholder', languageFile);
 
   const handleOnChange = async (event) => {
     const { value } = event.currentTarget;
@@ -31,7 +34,7 @@ const SearchBar = (props: Props): ReactElement => {
       <input
         onChange={handleOnChange}
         type="text"
-        placeholder={placeholder ? placeholder : useTranslator('searchPlaceholder', languageFile)}
+        placeholder={placeholderText}
         className={styles.textBox}
       />
       <svg
