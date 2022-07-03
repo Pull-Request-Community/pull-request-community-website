@@ -1,6 +1,4 @@
 import React, { useCallback, ReactElement } from 'react';
-import { useTranslator } from '../language/useTranslator';
-import languageFile from '../main-page-description/MainPageDescription.language.json';
 import styles from './SearchBar.module.scss';
 
 interface Props {
@@ -20,9 +18,6 @@ const SearchBar = (props: Props): ReactElement => {
   const { handelSearch, placeholder } = props;
 
   const debounceHandler = useCallback(debounce(handelSearch, 1000), []);
-  const placeholderText = placeholder
-    ? placeholder
-    : useTranslator('searchPlaceholder', languageFile);
 
   const handleOnChange = async (event) => {
     const { value } = event.currentTarget;
@@ -34,7 +29,7 @@ const SearchBar = (props: Props): ReactElement => {
       <input
         onChange={handleOnChange}
         type="text"
-        placeholder={placeholderText}
+        placeholder={placeholder ? placeholder : 'Search'}
         className={styles.textBox}
       />
       <svg
