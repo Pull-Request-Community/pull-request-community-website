@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "npm run build && next start",
     "prepare": "husky install",
-    "lint": "next lint",
+    "lint": "next lint && prettier --check .",
+    "lint:fix": "next lint --fix && prettier --write .",
     "test:e2e": "playwright test"
   },
   "dependencies": {
@@ -39,8 +40,8 @@
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{json,md,scss}": [
-      "prettier --write"
+    "*": [
+      "prettier --ignore-unknown --write"
     ]
   }
 }
