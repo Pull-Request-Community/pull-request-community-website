@@ -13,26 +13,18 @@
       "linkedin": "https://www.linkedin.com/in/michal-porag-9522b5142/",
       "website": "https://medium.com/@miporagi",
       "description": "אני מיכל פורג, מפתחת פולסטאק ב-Skillset, סטודנטית למדעי המחשב באוניברסיטה הפתוחה ומנהלת את קהילת PullRequest. אני תורמת קוד בעיקר לפרויקט \"הייתי_שם\", זה אתר שמנציח עדויות של נפגעי אלימות במערכות יחסים מכל סוג ומקשר בינם לבין גורמים שיכולים לעזור להם (עוד בשלבי בנייה). אני אוהבת לצייר, לקרוא וחתולים.",
-      "roles": [
-        "Admin"
-      ],
+      "roles": ["Admin"],
       "customImage": false
     }
   ],
-  "required": [
-    "name",
-    "github",
-    "description"
-  ],
+  "required": ["name", "github", "description"],
   "properties": {
     "name": {
       "$id": "#/properties/name",
       "type": "string",
       "title": "Full name",
       "description": "Your full name, in Hebrew",
-      "examples": [
-        "מיכל פורג"
-      ]
+      "examples": ["מיכל פורג"]
     },
     "github": {
       "$id": "#/properties/github",
@@ -40,36 +32,28 @@
       "title": "GitHub Username",
       "pattern": "^[A-Za-z\\d](?:[A-Za-z\\d]|-(?=[A-Za-z\\d])){0,38}$",
       "description": "Your GitHub username",
-      "examples": [
-        "MichalPorag"
-      ]
+      "examples": ["MichalPorag"]
     },
     "facebook": {
       "$id": "#/properties/facebook",
       "type": "string",
       "title": "Your Facebook profile URL",
       "format": "uri",
-      "examples": [
-        "https://www.facebook.com/miporagi"
-      ]
+      "examples": ["https://www.facebook.com/miporagi"]
     },
     "twitter": {
       "$id": "#/properties/twitter",
       "type": "string",
       "title": "Your Twitter profile URL",
       "format": "uri",
-      "examples": [
-        "https://twitter.com/MichalPorag"
-      ]
+      "examples": ["https://twitter.com/MichalPorag"]
     },
     "linkedin": {
       "$id": "#/properties/linkedin",
       "type": "string",
       "title": "Your LinkedIn Page",
       "format": "uri",
-      "examples": [
-        "https://www.linkedin.com/in/michal-porag-9522b5142/"
-      ]
+      "examples": ["https://www.linkedin.com/in/michal-porag-9522b5142/"]
     },
     "website": {
       "$id": "#/properties/website",
@@ -77,18 +61,14 @@
       "title": "Personal blog / website",
       "description": "Your personal blog or website (it has to be about you)",
       "format": "uri",
-      "examples": [
-        "https://medium.com/@miporagi"
-      ]
+      "examples": ["https://medium.com/@miporagi"]
     },
     "stackoverflow": {
       "$id": "#/properties/stackoverflow",
       "type": "string",
       "title": "Stackoverflow profile link",
       "format": "uri",
-      "examples": [
-        "https://stackoverflow.com/users/1348195/benjamin-gruenbaum"
-      ]
+      "examples": ["https://stackoverflow.com/users/1348195/benjamin-gruenbaum"]
     },
     "description": {
       "$id": "#/properties/description",
@@ -104,20 +84,14 @@
       "type": "array",
       "title": "Community roles",
       "description": "Only people who have role on pull request community",
-      "examples": [
-        [
-          "Admin"
-        ]
-      ]
+      "examples": [["Admin"]]
     },
     "customImage": {
       "$id": "#/properties/customImage",
       "type": "boolean",
       "title": "Custom image",
       "description": "Only people who want their own picture",
-      "examples": [
-        false
-      ]
+      "examples": [false]
     }
   },
   "additionalProperties": true
