@@ -4,14 +4,15 @@
   flex-direction: column;
   font-size: 1.6rem; // Based on 10px.
   gap: 20px;
-  padding: 72px 0 114px;
+  padding: 136px 0 114px;
   margin: 0 auto;
-  max-width: 1280px;
+  width: 1280px;
 
   @media only screen and (max-width: 768px) {
     justify-content: center;
     flex-wrap: wrap;
-    padding: 72px 24px 114px;
+    padding: 136px 24px 80px;
     margin: 0 auto;
+    max-width: 1280px;
   }
 }
