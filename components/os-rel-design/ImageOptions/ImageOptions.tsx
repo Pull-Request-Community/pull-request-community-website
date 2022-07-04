@@ -14,7 +14,7 @@ function ImageOptions({ onSetImage, onSetSize, size, onRenderCanvas, imageUrl })
       </div>
       {imageUrl && (
         <div>
-          <p className={style.changeIconSizeText}>change icon size</p>
+          <p className={style.changeIconSizeText}>Change image size</p>
           <input onChange={(e) => onSetSize(e.target.value)} value={size} type="number"></input>
         </div>
       )}
