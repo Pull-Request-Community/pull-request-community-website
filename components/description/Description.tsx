@@ -6,7 +6,9 @@ const Description = ({ descriptionOutput, descriptionHeight }) => {
   const myRef = useRef(null);
   const [height, setHeight] = useState(0);
 
-  descriptionHeight(height);
+  useEffect(() => {
+    descriptionHeight(height);
+  }, [descriptionHeight, height]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,10 +22,8 @@ const Description = ({ descriptionOutput, descriptionHeight }) => {
   }, [myRef]);
 
   return (
-    <div>
-      <div ref={myRef} id="container" className={style.container}>
-        {descriptionOutput}
-      </div>
+    <div ref={myRef} id="container" className={style.container}>
+      {descriptionOutput}
     </div>
   );
 };

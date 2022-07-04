@@ -38,6 +38,8 @@
   }
 
   &__icons {
+    display: flex;
+    gap: 4px;
     margin-top: 30px;
     align-self: flex-end;
 

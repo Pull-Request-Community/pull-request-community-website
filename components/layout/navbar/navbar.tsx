@@ -1,22 +1,26 @@
 import Link from 'next/link';
+import Img from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 import { mdiGithub } from '@mdi/js';
 import Icon from '@mdi/react';
-import Title from '../../typography/title';
 import { useTheme } from 'next-themes';
 import BasicButton from '../../buttons/basicButton';
-import colors from '../../../styles/colors';
 import { useRouter } from 'next/router';
 import SocialNetworks from '../../socialNetworks/socialNetworks';
 import { mobile } from '../../../utils/mediaQueries';
 import { useEffect, useState } from 'react';
+import styles from './navbar.module.scss';
+import { useTranslator } from '../../language/useTranslator';
+import languageFile from './navbar.language.json';
 
 const Navbar = ({ DesHeight }) => {
   const { asPath } = useRouter();
   const isMobile = useMediaQuery({ query: mobile });
   const [className, setClassName] = useState('navbar__logo');
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
+
+  const addMeTranslate = useTranslator('add_me', languageFile);
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -44,8 +48,8 @@ const Navbar = ({ DesHeight }) => {
           <button
             aria-label="Toggle Dark Mode"
             type="button"
-            className="toggle-dark-mode"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            className={styles.toggleDarkMode}
+            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +58,7 @@ const Navbar = ({ DesHeight }) => {
               stroke="currentColor"
               style={{ height: '24px', width: '24px' }}
             >
-              {theme === 'dark' ? (
+              {resolvedTheme === 'dark' ? (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -77,14 +81,14 @@ const Navbar = ({ DesHeight }) => {
               className="navbar__btn"
               href="https://github.com/MichalPorag/pull-request-community#adding-your-profile"
             >
-              <span>הוסיפו אותי</span>{' '}
+              <span>{addMeTranslate}</span>{' '}
               <Icon style={{ width: '24px' }} className="navbar__btn--icon" path={mdiGithub} />
             </a>
           </BasicButton>
         </div>
         <Link shallow href="/">
           <a className={className}>
-            <img className="inner-logo" src="/images/logo-2.0.svg" />
+            <Img className="inner-logo" src="/images/logo-2.0.svg" />
           </a>
         </Link>
       </div>
@@ -106,6 +110,7 @@ const Navbar = ({ DesHeight }) => {
           display: flex;
           align-items: center;
           justify-content: center;
+          gap: 4px;
         }
 
         .navbar__container {

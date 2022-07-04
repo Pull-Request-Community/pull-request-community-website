@@ -28,7 +28,7 @@ const ShowMore = ({
     }
 
     return maxCharacter;
-  }, [isMobile]);
+  }, [isMobile, maxCharacter, mobileMaxCharacter]);
   const isShowMoreSupport = useMemo(() => text.length > currentMaxCharacter, [
     currentMaxCharacter,
     text,
@@ -39,7 +39,7 @@ const ShowMore = ({
     }
 
     return text;
-  }, [currentMaxCharacter, text, showMore]);
+  }, [isShowMoreSupport, text, showMore, currentMaxCharacter]);
 
   const onToggleContent = () => {
     setShowMore(!showMore);
