@@ -10,9 +10,16 @@ function TalksPage() {
           Pull Request is the biggest open-source community in israel with more then 4.5K developers
         </p>{' '}
       </p>
-
-      <div className={style.infoContainer}>
-        <div className={style.license}>Mozilla Public License 2.0</div>
+      <div className={style.videos}>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/2D0LmCtVTSk"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          title="video"
+        ></iframe>{' '}
       </div>
     </div>
   );

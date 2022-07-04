@@ -13,6 +13,11 @@
   color: #0b008e;
 }
 
+.videos {
+  display: flex;
+  justify-content: center;
+}
+
 .description {
   font-size: 1.6rem; // Based on 10px.
 }
