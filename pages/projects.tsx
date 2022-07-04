@@ -7,7 +7,7 @@ import ProjectPage from '../components/projectPage/projectPage';
 import Footer from '../components/layout/footer/footer';
 import Layout from '../components/layout/layout';
 
-export default function vast() {
+export default function Vast() {
   const [currentHeight, setCurrentHeight] = useState(0);
   console.log(currentHeight);
 
