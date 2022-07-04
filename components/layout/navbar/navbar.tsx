@@ -88,7 +88,7 @@ const Navbar = ({ DesHeight }) => {
         </div>
         <Link shallow href="/">
           <a className={className}>
-            <Img className="inner-logo" src="/images/logo-2.0.svg" />
+            <Img layout="fill" className="inner-logo" src="/images/logo-2.0.svg" />
           </a>
         </Link>
       </div>
