@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Meetup records",
+    "videos": [
+      {
+        "src": "J5R-7IfY2Dc",
+        "title": "David Meir-Levy - useContribute() or: What's in it for me? (Hebrew)"
+      },
+      {
+        "src": "e8pPZssRGi8",
+        "title": "Dima Brusilovsky - Code Reviewers - not all heroes wear capes (Hebrew)"
+      },
+      {
+        "src": "YpBwS51pva8",
+        "title": "Liran Tal - Why You Should Care About Open Source Security"
+      },
+      {
+        "src": "8q-IzexQf8o",
+        "title": "Avi Youkhananov - My Open Source journey at Outbrain"
+      },
+      {
+        "src": "vPNBYQcNk_s",
+        "title": "Gil Fink - Using Data Visualization to Fight COVID-19"
+      },
+      {
+        "src": "emN2bYITbXY",
+        "title": "Tally Barak - The secret life of package managers"
+      },
+      {
+        "src": "AIlfPXslA94",
+        "title": "Vest - Evyatar Alush [Pull Request Workshop]"
+      },
+      {
+        "src": "jOl4baVqCqE",
+        "title": "Pull Request Platform - Oz Izhak [Pull Request Workshop]"
+      },
+      {
+        "src": "k0yXAB74e1k",
+        "title": "Open Source 101 / Tomer Brisker [Pull Request ]"
+      },
+      {
+        "src": "iLexvQlY_AI",
+        "title": "How to weave the web / Noam Rosenthal [Pull Request]"
+      },
+      {
+        "src": "2D0LmCtVTSk&t=2s",
+        "title": "What you need to know about contributing to open source / Evyatar Alush"
+      },
+      {
+        "src": "KuzSu4y2fJQ",
+        "title": "Bilt Overview / Gil Tayar [Pull Request]"
+      }
+    ]
+  },
+  {
+    "title": "Open Source Projects",
+    "videos": [
+      {
+        "src": "8SNOfhjIsCk",
+        "title": "Predator / Eli Nudler [Pull Request]"
+      },
+      {
+        "src": "8bhFCp-zF8s",
+        "title": "BackupFriend Overview / Guy Sheffer [Pull Request]"
+      },
+      {
+        "src": "BMcohxatksc",
+        "title": "Appwrite / Eldad Fux [Pull Request]"
+      },
+      {
+        "src": "UDtKwhLgPrk",
+        "title": "Vest Overview / Evyatar Alush [Pull Request]"
+      },
+      {
+        "src": "fDOCGS4p3MM",
+        "title": "Contributing to Node.js / Benjamin Gruenbaum [Pull Request]"
+      }
+    ]
+  },
+  {
+    "title": "GitMonthly",
+    "videos": [
+      {
+        "src": "UfaCFq6jNlU",
+        "title": "git push --force / Noaa Barki [Pull Request]"
+      },
+      {
+        "src": "6zklLJHsBME",
+        "title": "Git Bisect & rerere / Noa Barki [Pull Request]"
+      }
+    ]
+  }
+]
