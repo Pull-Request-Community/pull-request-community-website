@@ -11,6 +11,9 @@
   &[role="Admin"] {
     background: cornflowerblue;
   }
+  &[role="Former admin"] {
+    background: cadetblue;
+  }
 
   @media screen and (max-width: 600px) {
     font-size: 10px;
