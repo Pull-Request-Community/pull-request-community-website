@@ -11,7 +11,7 @@ export default function Vast() {
   console.log(currentHeight);
 
   return (
-    <Layout descriptionText={ProjectPage()}>
+    <Layout descriptionContent={<ProjectPage/>}>
       <h1>projects</h1>
     </Layout>
   );

@@ -7,7 +7,7 @@ import { useState } from 'react';
 import DescriptionContainer from '../descriptionContainer/DescriptionContainer';
 import style from './layout.module.scss';
 
-const Layout = ({ children, descriptionText }: LayoutProps) => {
+const Layout = ({ children, descriptionContent }: LayoutProps) => {
   const currentRoute = useRouter().pathname;
   const { title, metaContents } = getMetaData(currentRoute);
   const [currentHeight, setCurrentHeight] = useState(0);
@@ -28,7 +28,7 @@ const Layout = ({ children, descriptionText }: LayoutProps) => {
           setCurrentHeight(hight);
         }}
       >
-        <div className={style.description}>{descriptionText}</div>
+        <div className={style.description}>{descriptionContent}</div>
       </DescriptionContainer>
       {children}
       <Footer />
@@ -38,7 +38,7 @@ const Layout = ({ children, descriptionText }: LayoutProps) => {
 
 interface LayoutProps {
   children: object;
-  descriptionText?: object;
+  descriptionContent?: object;
 }
 
 export default Layout;
