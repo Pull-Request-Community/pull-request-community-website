@@ -1,5 +1,10 @@
 name: "Tests: E2E"
+
 on: [pull_request]
+
+env:
+  GITHUB_PR_NUMBER: ${{github.event.pull_request.number}}
+
 jobs:
   tests_e2e:
     name: Run end-to-end tests
@@ -40,5 +45,5 @@ jobs:
       - name: npm run test:e2e
         run: npm run test:e2e
         env:
-          PLAYWRIGHT_TEST_BASE_URL: https://deploy-preview-{{ id }}--pull-request.netlify.app/
+          PLAYWRIGHT_TEST_BASE_URL: "https://deploy-preview-${{env.GITHUB_PR_NUMBER}}--pull-request.netlify.app/"
           DEBUG: pw:api
