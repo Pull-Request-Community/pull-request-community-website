@@ -23,7 +23,7 @@ jobs:
         id: wait-for-netflify-preview
         with:
           site_name: "pull-request"
-          max_timeout: 60
+          max_timeout: 180
 
   tests_e2e_netlify:
     needs: tests_e2e_netlify_prepare
