@@ -12,6 +12,7 @@ $duration: 250ms;
   display: grid;
   grid-template-columns: repeat(3, 100%);
   overflow: hidden;
+  height: 200px;
   scroll-behavior: smooth;
 
   .section {
