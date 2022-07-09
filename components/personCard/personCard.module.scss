@@ -47,7 +47,7 @@
       margin: 0 2px;
 
       & > svg {
-        width: 3rem;
+        width: 1.875rem;
         transition: all 0.2s ease-in;
 
         &:hover {
@@ -59,13 +59,13 @@
   }
 
   &__headline {
-    font-size: 4.8rem;
+    font-size: 3rem;
     font-weight: lighter;
     line-height: 1;
   }
 
   &__desc {
-    font-size: 1.6rem;
+    font-size: 1rem;
     transform: translateY(10px);
   }
 
@@ -92,16 +92,16 @@
     }
 
     &__headline {
-      font-size: 2.8rem;
+      font-size: 1.75rem;
     }
 
     &__desc {
-      margin-top: 1rem;
+      margin-top: 0.625rem;
     }
 
     &__icons {
       & > a > svg {
-        width: 2.1rem;
+        width: 1.3125rem;
       }
     }
   }

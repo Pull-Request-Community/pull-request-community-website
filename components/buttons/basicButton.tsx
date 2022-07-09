@@ -9,7 +9,7 @@ const BasicButton = ({ children, className }: BasicButtonProps) => {
           user-select: none;
           cursor: pointer;
           color: white;
-          font-size: 1.6rem;
+          font-size: 1rem;
           border: none;
           border-radius: 64px;
           background-color: var(--primary);
