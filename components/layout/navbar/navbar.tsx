@@ -88,7 +88,7 @@ const Navbar = ({ DesHeight }) => {
         </div>
         <Link shallow href="/">
           <a className={className}>
-            <Img className="inner-logo" src="/images/logo-2.0.svg" />
+            <Img className="inner-logo" layout="fill" src="/images/logo-2.0.svg" />
           </a>
         </Link>
       </div>
@@ -165,13 +165,13 @@ const Navbar = ({ DesHeight }) => {
         }
 
         .navbar__title {
-          font-size: 2.2rem;
+          font-size: 1.375rem;
         }
 
         .navbar__navs {
           display: flex;
           align-items: center;
-          font-size: 2.2rem;
+          font-size: 1.375rem;
         }
 
         .navbar__tabs {
@@ -223,7 +223,7 @@ const Navbar = ({ DesHeight }) => {
           }
 
           .navbar__btn > span {
-            font-size: 1.8rem;
+            font-size: 1.125rem;
           }
           .navbar__logo {
             margin: 48px 0 0 -10px;
