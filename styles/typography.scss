@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&display=swap");
+
+//based on 1rem = 16px
+
+$fontsize-1: 2.25rem; //36px
+$fontsize-2: 2rem; //32px
+$fontsize-3: 1.5rem; //24px
+$fontsize-4: 1.25rem; //20px
+$fontsize-5: 1rem; //16px
+$fontsize-6: 0.875rem; //14px
+
+.heading-one {
+  font-size: $fontsize-1;
+  font-weight: 800;
+}
+
+.heading-two {
+  font-size: $fontsize-2;
+  font-weight: 800;
+}
+
+.heading-three {
+  font-size: $fontsize-3;
+  font-weight: 700;
+}
+
+.heading-four {
+  font-size: $fontsize-4;
+  font-weight: 700;
+}
+
+.subheading-one {
+  font-size: $fontsize-1;
+  font-weight: 400;
+}
+
+.subheading-two {
+  font-size: $fontsize-2;
+  font-weight: 400;
+}
+
+.body-one {
+  font-size: $fontsize-4;
+  font-weight: 400;
+}
+
+.body-two {
+  font-size: $fontsize-3;
+  font-weight: 400;
+}
+
+.small-text {
+  font-size: $fontsize-5;
+  font-weight: 400;
+}
+
+.overline {
+  font-size: $fontsize-6;
+  font-weight: 700;
+  text-transform: uppercase;
+}
