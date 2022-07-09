@@ -1,0 +1,49 @@
+.container {
+  background-image: url("../../../public/assets/squerBackground.svg");
+  width: 480px;
+  height: 480px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logoContainer {
+    margin: 36px 0;
+    width: 124px;
+    background: linear-gradient(60deg, #01007d 0%, #832ec6 47.92%, #dc665e 100%);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-45deg);
+
+    &::after {
+      content: "";
+      padding-bottom: 100%;
+    }
+
+    .logo {
+      width: 100%;
+      height: 78%;
+      transform: rotate(45deg);
+    }
+  }
+
+  .heartsContainer {
+    display: flex;
+    gap: 30px;
+    .heart {
+      width: 56px;
+    }
+  }
+  .uploadImageContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .ImageApload {
+      width: auto;
+    }
+  }
+}

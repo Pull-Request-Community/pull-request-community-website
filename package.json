@@ -8,12 +8,14 @@
     "build": "next build",
     "start": "npm run build && next start",
     "prepare": "husky install",
-    "lint": "next lint",
+    "lint": "next lint && prettier --check .",
+    "lint:fix": "next lint --fix && prettier --write .",
     "test:e2e": "playwright test"
   },
   "dependencies": {
     "@mdi/js": "^5.6.55",
     "@mdi/react": "^1.4.0",
+    "html2canvas": "^1.4.1",
     "next": "^11.0.0",
     "next-themes": "^0.1.1",
     "react": "^17.0.2",
@@ -39,8 +41,8 @@
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{json,md,scss}": [
-      "prettier --write"
+    "*": [
+      "prettier --ignore-unknown --write"
     ]
   }
 }
