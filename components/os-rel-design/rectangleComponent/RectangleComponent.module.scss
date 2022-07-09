@@ -1,0 +1,45 @@
+.container {
+  background: linear-gradient(rgb(125, 125, 125, 0.1), rgb(125, 125, 125, 0.1)),
+    url("../../../public/assets/rectangleBackground.svg");
+  background-size: cover;
+  width: 540px;
+  height: 124px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .logoBackground {
+    min-height: 84px;
+    min-width: 84px;
+    width: 84px;
+    height: 84px;
+    background: linear-gradient(60deg, #01007d 0%, #832ec6 47.92%, #dc665e 100%);
+    border-radius: 18px;
+    margin: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-45deg);
+
+    .logo {
+      width: 100%;
+      height: 80%;
+      transform: rotate(45deg);
+    }
+  }
+
+  .heart {
+    width: 86px;
+  }
+
+  .uploadImageContainer {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    .ImageUpload {
+      width: auto;
+    }
+  }
+}
