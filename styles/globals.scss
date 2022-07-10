@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&display=swap");
+@import "./typography.scss";
 
 * {
   box-sizing: border-box;
@@ -18,7 +18,6 @@ html {
   direction: rtl;
   background-color: var(--background-color);
   color: var(--text);
-  font-size: 10px;
 
   @media screen and (max-width: 600px) {
     font-size: 9px;

@@ -9,7 +9,7 @@ const SocialButton = ({ children, className }: BasicButtonProps) => {
           user-select: none;
           cursor: pointer;
           color: white;
-          font-size: 2.4rem;
+          font-size: 1.5rem;
           border: none;
           border-radius: 100%;
           padding: 10px 0;

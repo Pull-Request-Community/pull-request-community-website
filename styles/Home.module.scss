@@ -1,27 +1,18 @@
 @import "media";
 
-.container {
-  width: 100%;
-
-  .cards__wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-auto-rows: 1fr;
-    gap: 30px 45px;
-    justify-items: center;
-    padding: 0 25px;
-    margin: 0 auto;
-    max-width: 1280px;
-    margin-bottom: 100px;
-  }
+.cards__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 30px 45px;
+  justify-items: center;
+  margin-bottom: 100px;
+  max-width: 1280px;
+  margin: -24px auto 0;
 }
 
-@media screen and (max-width: 600px) {
-  .container {
-    width: 100%;
-
-    .cards__wrapper {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+@media screen and (max-width: 1280px) {
+  .cards__wrapper {
+    padding: 0 25px;
   }
 }

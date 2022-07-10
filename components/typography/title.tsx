@@ -8,7 +8,7 @@ const Title = ({ children, center, className, ...rest }: TitleProps) => {
 
       <style jsx>{`
         .Title {
-          font-size: ${fontSize ?? '3.8rem'};
+          font-size: ${fontSize ?? '2.375rem'};
           line-height: 1.8;
           font-weight: bold;
           text-align: ${center ?? 'right'};
