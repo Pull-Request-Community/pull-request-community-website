@@ -30,5 +30,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       people: randomShuffle(getPeople()),
     },
+    revalidate: true,
   };
 };

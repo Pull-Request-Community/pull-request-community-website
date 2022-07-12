@@ -6,9 +6,10 @@
     "dev": "npm run open-browser && next dev",
     "open-browser": "node ./scripts/open-browser.js",
     "build": "next build",
-    "start": "next start",
+    "start": "npm run build && next start",
     "prepare": "husky install",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@mdi/js": "^5.6.55",
@@ -23,6 +24,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.22.2",
     "@types/node": "^14.11.2",
     "@types/react": "^16.9.50",
     "eslint": "^7.32.0",
