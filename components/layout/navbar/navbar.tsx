@@ -56,7 +56,7 @@ const Navbar = ({ DesHeight }) => {
               viewBox="0 0 24 24"
               fill="currentColor"
               stroke="currentColor"
-              style={{ height: '24px', width: '24px' }}
+              className={styles.themeModeIcon}
             >
               {resolvedTheme === 'dark' ? (
                 <path
@@ -82,7 +82,7 @@ const Navbar = ({ DesHeight }) => {
               href="https://github.com/MichalPorag/pull-request-community#adding-your-profile"
             >
               <span>{addMeTranslate}</span>{' '}
-              <Icon style={{ width: '24px' }} className="navbar__btn--icon" path={mdiGithub} />
+              <Icon className={`navbar__btn--icon ${styles.githubIcon}`} path={mdiGithub} />
             </a>
           </BasicButton>
         </div>
