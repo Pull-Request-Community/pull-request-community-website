@@ -78,11 +78,8 @@ const Navbar = ({ DesHeight }) => {
 
           {!isMobile && <SocialNetworks />}
 
-          <Link
-            className="navbar__btn"
-            href="https://github.com/MichalPorag/pull-request-community#adding-your-profile"
-          >
-            <a>
+          <Link href="https://github.com/MichalPorag/pull-request-community#adding-your-profile">
+            <a className="navbar__btn">
               <BasicButton>
                 <span>{addMeTranslate}</span>{' '}
                 <Icon style={{ width: '24px' }} className="navbar__btn--icon" path={mdiGithub} />
@@ -90,8 +87,8 @@ const Navbar = ({ DesHeight }) => {
             </a>
           </Link>
 
-          <Link passHref className="navbar__btn" href="/videos">
-            <a>
+          <Link passHref href="/videos">
+            <a className="navbar__btn">
               <BasicButton>
                 <span>Videos</span>{' '}
                 <Icon
