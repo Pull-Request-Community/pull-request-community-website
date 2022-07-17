@@ -14,10 +14,12 @@
   "dependencies": {
     "@mdi/js": "^5.6.55",
     "@mdi/react": "^1.4.0",
+    "@reduxjs/toolkit": "^1.8.2",
     "next": "^11.0.0",
     "next-themes": "^0.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^8.0.2",
     "react-responsive": "^8.2.0",
     "sass": "^1.32.0",
     "uuid": "^8.3.2"
