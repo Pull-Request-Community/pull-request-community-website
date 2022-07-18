@@ -1,5 +1,4 @@
 import next from 'next';
-import React, { useState } from 'react';
 import Navbar from '../components/layout/navbar/navbar';
 import style from '../styles/projects.module.scss';
 import React, { useEffect, useState } from 'react';
