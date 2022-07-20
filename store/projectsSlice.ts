@@ -15,7 +15,7 @@ const projectsSlice = createSlice({
   name: 'projects',
   initialState,
   reducers: {
-    receivedProjects: (state: RootState, action: PayloadAction<User[]>) => {
+    receivedProjects: (state, action: PayloadAction<User[]>) => {
       const allUsers = action.payload;
       allUsers.forEach((project) => (state.items[project.id] = project));
     },
