@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
-import style from './description.module.scss';
-import colors from '../../styles/colors';
+import style from './DescriptionContainer.module.scss';
 
-const Description = ({ descriptionOutput, descriptionHeight }) => {
+const DescriptionContainer = (props) => {
+  const { children, descriptionHeight } = props;
   const myRef = useRef(null);
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
     descriptionHeight(height);
-  }, [descriptionHeight, height]);
+  }, [height]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,9 +23,9 @@ const Description = ({ descriptionOutput, descriptionHeight }) => {
 
   return (
     <div ref={myRef} id="container" className={style.container}>
-      {descriptionOutput}
+      {children}
     </div>
   );
 };
 
-export default Description;
+export default DescriptionContainer;

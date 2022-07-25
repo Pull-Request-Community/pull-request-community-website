@@ -1,6 +1,5 @@
 import next from 'next';
 import React, { useState } from 'react';
-import Description from '../components/description/Description';
 import Navbar from '../components/layout/navbar/navbar';
 import style from '../styles/projects.module.scss';
 import ProjectPage from '../components/projectPage/projectPage';
@@ -12,7 +11,7 @@ export default function Vast() {
   console.log(currentHeight);
 
   return (
-    <Layout descriptionText={ProjectPage()}>
+    <Layout descriptionContent={<ProjectPage/>}>
       <h1>projects</h1>
     </Layout>
   );
