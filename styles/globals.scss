@@ -26,19 +26,19 @@ html {
 }
 
 html {
-  --primary: #{$moderate-red};
-  --background-color: #{$light-gray};
+  --primary: #{$red-200};
+  --background-color: #{$gray-100};
   --background-description: white;
   --card-background: white;
-  --header-background: #{$very-dark-blue};
-  --text: #{$dark-blue-black};
+  --header-background: #{$gray-700};
+  --text: #{$gray-900};
 }
 
 html.dark {
-  --primary: #{$moderate-red};
-  --background-color: #{$very-dark-gray};
-  --background-description: #{$very-dark-blue-black};
-  --card-background: #{$very-dark-grayish-blue};
+  --primary: #{$red-200};
+  --background-color: #{$gray-500};
+  --background-description: #{$gray-800};
+  --card-background: #{$gray-600};
   --header-background: black;
-  --text: #{$light-gray};
+  --text: #{$gray-100};
 }
