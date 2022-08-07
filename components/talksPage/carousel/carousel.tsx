@@ -23,12 +23,12 @@ function Carousel() {
       <h1 className={style.title}>Meetup records</h1>
       <div className={style.wrapper}>
         {sectionsList.map((section, i) => (
-          <section className={style.section} id={'section' + (i + 1)}>
+          <section className={style.section} id={'section' + (i + 1)} key={'section' + (i + 1)}>
             <a href={'#section' + calcSide(i + 1, i)} className={style.arrow__btn}>
               ‹
             </a>
             {section.videos.map((video) => (
-              <div className={style.item}>
+              <div className={style.item} key={'item' + (i + 1)}>
                 <iframe
                   height="200"
                   src={'https://www.youtube.com/embed/' + video.src}
