@@ -3,6 +3,10 @@
     "title": "Meetup records",
     "videos": [
       {
+        "src": "GHbNaDSWUX8",
+        "title": "Qwik Workshop Part 1 - Live Coding / Misko Hevery"
+      },
+      {
         "src": "J5R-7IfY2Dc",
         "title": "David Meir-Levy - useContribute() or: What's in it for me? (Hebrew)"
       },
@@ -43,12 +47,8 @@
         "title": "How to weave the web / Noam Rosenthal [Pull Request]"
       },
       {
-        "src": "2D0LmCtVTSk&t=2s",
+        "src": "2D0LmCtVTSk",
         "title": "What you need to know about contributing to open source / Evyatar Alush"
-      },
-      {
-        "src": "KuzSu4y2fJQ",
-        "title": "Bilt Overview / Gil Tayar [Pull Request]"
       }
     ]
   },
@@ -72,8 +72,24 @@
         "title": "Vest Overview / Evyatar Alush [Pull Request]"
       },
       {
+        "src": "6ugN2HCrh2E",
+        "title": "Greenpress Overview / David Meir-Levy [Pull Request]"
+      },
+      {
+        "src": "KuzSu4y2fJQ",
+        "title": "Objectbuffer Overview / Bnaya Perez [Pull Request]"
+      },
+      {
+        "src": "JI_QTB_JT2A",
+        "title": "Mini Services / Snir Shecther [Pull Request]"
+      },
+      {
         "src": "fDOCGS4p3MM",
         "title": "Contributing to Node.js / Benjamin Gruenbaum [Pull Request]"
+      },
+      {
+        "src": "KuzSu4y2fJQ",
+        "title": "Bilt Overview / Gil Tayar [Pull Request]"
       }
     ]
   },
