@@ -18,7 +18,6 @@ html {
   direction: rtl;
   background-color: var(--background-color);
   color: var(--text);
-  scroll-behavior: smooth;
 
   @media screen and (max-width: 600px) {
     font-size: 9px;
