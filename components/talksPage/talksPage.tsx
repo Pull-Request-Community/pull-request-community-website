@@ -4,10 +4,10 @@ import data from '../../assets/videos.json';
 import YouTube from 'react-youtube';
 
 function TalksPage() {
-  const dataList = data;
+  const talksList = data;
   const [currSrc, setSrc] = useState('GHbNaDSWUX8');
 
-  const calcSide = (curr, side, length) => {
+  const calcArrowSide = (curr, side, length) => {
     if (side > curr) {
       if (curr === length) {
         return 1;
@@ -20,12 +20,12 @@ function TalksPage() {
     return side;
   };
 
-  const onIframe = (event) => {
-    event.target.pauseVideo();
-    setSrc(event.target.playerInfo.videoData.video_id);
+  const onVideoClick = (event) => {
+    event.target.pauseVideo(); // stop chosen video
+    setSrc(event.target.playerInfo.videoData.video_id); // open the chosen video on the big iframe
   };
 
-  const setVideos = (props) => {
+  const setVideos = (props) => { // add youtube videos
     const opts = {
       height: '200',
       width: '320',
@@ -37,12 +37,12 @@ function TalksPage() {
         id={'item' + i + '_' + props.index}
         key={'item' + i + '_' + props.index}
       >
-        <YouTube videoId={video.src} opts={opts} title={video.title} onPlay={onIframe}></YouTube>{' '}
+        <YouTube videoId={video.src} opts={opts} title={video.title} onPlay={onVideoClick}></YouTube>{' '}
       </div>
     ));
   };
 
-  const setSections = (props) => {
+  const setSections = (props) => { // organize sections based on categories
     const chunkVideos = props.chunkVideos;
     const index = props.index;
 
@@ -53,14 +53,14 @@ function TalksPage() {
         key={'section' + (i + 1) + '_' + index}
       >
         <a
-          href={'#section' + calcSide(i + 1, i, chunkVideos.length) + '_' + index}
+          href={'#section' + calcArrowSide(i + 1, i, chunkVideos.length) + '_' + index}
           className={style.arrow__btn}
         >
           ‹
         </a>
         {setVideos({ sections, index })}
         <a
-          href={'#section' + calcSide(i + 1, i + 2, chunkVideos.length) + '_' + index}
+          href={'#section' + calcArrowSide(i + 1, i + 2, chunkVideos.length) + '_' + index}
           className={style.arrow__btn}
         >
           ›
@@ -69,16 +69,16 @@ function TalksPage() {
     ));
   };
 
-  const setCategories = (props) => {
-    const perChunk = 3; // items per chunk
+  const setCategories = (props) => { // divide each category's videos into chunks
+    const perChunk = 3; // videos per chunk
 
-    const chunkVideos = props.videos.reduce((resultArray, item, index) => {
+    const chunkVideos = props.videos.reduce((chunkArray, video, index) => {
       const chunkIndex = Math.floor(index / perChunk);
-      if (!resultArray[chunkIndex]) {
-        resultArray[chunkIndex] = []; // start a new chunk
+      if (!chunkArray[chunkIndex]) {
+        chunkArray[chunkIndex] = []; // start a new chunk
       }
-      resultArray[chunkIndex].push(item);
-      return resultArray;
+      chunkArray[chunkIndex].push(video);
+      return chunkArray;
     }, []);
 
     return setSections({ chunkVideos, index: props.index });
@@ -99,7 +99,7 @@ function TalksPage() {
         allowFullScreen
         title="video"
       ></iframe>{' '}
-      {dataList.map((category, index) => (
+      {talksList.map((category, index) => (
         <span key={'category' + index}>
           <h1 className={style.title}>{category.title}</h1>
           <div className={style.wrapper}>{setCategories({ videos: category.videos, index })};</div>
