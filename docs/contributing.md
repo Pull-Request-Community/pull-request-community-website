@@ -26,14 +26,14 @@ Please follow this guide to make your experience as pleasant and easy as possibl
 5. Try to brake the task into subtasks.
 6. Open a new branch (see instructions below).
 7. While working on an issue, feel free to ask any questions on the issue's page.
-8. Open pull request (make sure you open the pull requset on the original project and not on the forked project).
+8. Open pull request (make sure you open the pull request on the original project and not on the forked project).
 9. Make sure all the tests are passing.
 10. Merge to the _main_ branch.
 
 ## Working On Issue:
 
 Having a clear work flow of code development can be very useful. Therefore, please work on branches that are linked to a relevant issue.
-Don't you know how to connect a branch to an issue? no problem, follow this [guid](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-a-branch-for-an-issue).
+Don't you know how to connect a branch to an issue? No problem, follow this [guide](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-a-branch-for-an-issue).
 
 ## Developing In A Branch:
 
