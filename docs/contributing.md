@@ -60,4 +60,35 @@ export const Component = (props: Props): ReactElement => {
 }
 ```
 
+## GitHub API
+
+In case you get an error from GitHub like this:
+
+```json
+{
+  "message": "API rate limit exceeded for xxx.xxx.xxx.xxx."
+}
+```
+
+you may need to add a github token to your local enviroment to increase your rate limit.
+
+### Use Locally:
+
+#### Setup
+
+- first, you need to create your own [personal token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- create `.env.local` file in the project's root
+- add this line to the `.env.local` file: `GITHUB_API_KEY=<personal-token>`
+- restart your local server
+
+#### Usage
+
+```tsx
+import { getOctokit } from '<relative path>/services/github';
+
+const octokit = getOctokit();
+```
+
+> learn more about octokit [here](https://github.com/octokit/octokit.js#octokitrest-endpoint-methods).
+
 We hope you will have a great time contributing to this project.

@@ -16,7 +16,7 @@
 .star {
   width: 51px;
   height: 51px;
-  background-image: url("../../public/Star\ 1.svg");
+  background-image: url("../../public/Star.svg");
   margin: -30px 0 0 -15px;
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@
 }
 
 .star::after {
-  content: "30K";
+  content: attr(data-stars);
   transform: rotate(30deg);
   font-size: 12px;
   color: black;
