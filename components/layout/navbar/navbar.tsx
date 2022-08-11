@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Img from 'next/image';
 import { useMediaQuery } from 'react-responsive';
-import { mdiGithub } from '@mdi/js';
+import { mdiGithub, mdiAudioVideo } from '@mdi/js';
 import Icon from '@mdi/react';
 import { useTheme } from 'next-themes';
 import BasicButton from '../../buttons/basicButton';
@@ -75,17 +75,32 @@ const Navbar = ({ DesHeight }) => {
               )}
             </svg>
           </button>
+
           {!isMobile && <SocialNetworks />}
-          <BasicButton>
-            <a
-              className="navbar__btn"
-              href="https://github.com/MichalPorag/pull-request-community#adding-your-profile"
-            >
-              <span>{addMeTranslate}</span>{' '}
-              <Icon style={{ width: '24px' }} className="navbar__btn--icon" path={mdiGithub} />
+
+          <Link href="https://github.com/MichalPorag/pull-request-community#adding-your-profile">
+            <a className="navbar__btn">
+              <BasicButton>
+                <span>{addMeTranslate}</span>{' '}
+                <Icon style={{ width: '24px' }} className="navbar__btn--icon" path={mdiGithub} />
+              </BasicButton>
             </a>
-          </BasicButton>
+          </Link>
+
+          <Link passHref href="/videos">
+            <a className="navbar__btn">
+              <BasicButton>
+                <span>Videos</span>{' '}
+                <Icon
+                  style={{ width: '24px' }}
+                  className="navbar__btn--icon"
+                  path={mdiAudioVideo}
+                />
+              </BasicButton>
+            </a>
+          </Link>
         </div>
+
         <Link shallow href="/">
           <a className={className}>
             <Img layout="fill" className="inner-logo" src="/images/logo-2.0.svg" />
