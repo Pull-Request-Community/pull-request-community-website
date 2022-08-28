@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import style from './talksPage.module.scss';
-import talksList from '../../assets/videos';
+import talksList from '../../assets/videos.json';
 import YouTube from 'react-youtube';
 
 function TalksPage() {
