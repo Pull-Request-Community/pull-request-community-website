@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import style from './talksPage.module.scss';
-import data from '../../assets/videos.json';
+import talksList from '../../assets/videos';
 import YouTube from 'react-youtube';
 
 function TalksPage() {
-  const talksList = data;
   const [currSrc, setSrc] = useState('GHbNaDSWUX8');
 
   const calcArrowSide = (curr, side, length) => {
@@ -102,7 +101,7 @@ function TalksPage() {
       {talksList.map((category, index) => (
         <span key={'category' + index}>
           <h1 className={style.title}>{category.title}</h1>
-          <div className={style.wrapper}>{setCategories({ videos: category.videos, index })};</div>
+          <div className={style.wrapper}>{setCategories({ videos: category.videos, index })}</div>
         </span>
       ))}
     </div>
