@@ -36,7 +36,7 @@ function TalksPage() {
         id={'item' + i + '_' + videos.index}
         key={'item' + i + '_' + videos.index}
       >
-        <YouTube videoId={video.src} opts={opts} title={video.title} onPlay={onVideoClick}></YouTube>{' '}
+        <YouTube videoId={video.src} opts={opts} title={video.title} onPlay={onVideoClick}></YouTube>
       </div>
     ));
   };
