@@ -84,11 +84,7 @@ function TalksPage() {
   };
 
   return (
-    <div className={style.descriptionContainer}>
-      <h3 className={style.title}>Talks</h3>
-      <p dir="auto" className={style.description}>
-        Pull Request is the biggest open-source community in israel with more then 4.5K developers.
-      </p>
+    <div className={style.talksContainer}>
       <iframe
         className={style.video}
         height="400"
