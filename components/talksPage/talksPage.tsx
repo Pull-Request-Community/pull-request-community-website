@@ -80,7 +80,7 @@ function TalksPage() {
       return chunkArray;
     }, []);
 
-    return setSections({ chunkVideos, index: props.index });
+    return setSections({ chunkVideos, index: categoryVideos.index });
   };
 
   return (
