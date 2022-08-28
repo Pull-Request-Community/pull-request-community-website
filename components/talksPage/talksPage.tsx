@@ -24,26 +24,26 @@ function TalksPage() {
     setSrc(event.target.playerInfo.videoData.video_id); // open the chosen video on the big iframe
   };
 
-  const setVideos = (props) => { // add youtube videos
+  const setVideos = (videos) => { // add youtube videos
     const opts = {
       height: '200',
       width: '320',
     };
 
-    return props.sections.map((video, i) => (
+    return videos.sections.map((video, i) => (
       <div
         className={style.item}
-        id={'item' + i + '_' + props.index}
-        key={'item' + i + '_' + props.index}
+        id={'item' + i + '_' + videos.index}
+        key={'item' + i + '_' + videos.index}
       >
         <YouTube videoId={video.src} opts={opts} title={video.title} onPlay={onVideoClick}></YouTube>{' '}
       </div>
     ));
   };
 
-  const setSections = (props) => { // organize sections based on categories
-    const chunkVideos = props.chunkVideos;
-    const index = props.index;
+  const setSections = (videos) => { // organize sections based on categories
+    const chunkVideos = videos.chunkVideos;
+    const index = videos.index;
 
     return chunkVideos.map((sections, i) => (
       <section
@@ -68,10 +68,10 @@ function TalksPage() {
     ));
   };
 
-  const setCategories = (props) => { // divide each category's videos into chunks
+  const setCategories = (categoryVideos) => { // divide each category's videos into chunks
     const perChunk = 3; // videos per chunk
 
-    const chunkVideos = props.videos.reduce((chunkArray, video, index) => {
+    const chunkVideos = categoryVideos.videos.reduce((chunkArray, video, index) => {
       const chunkIndex = Math.floor(index / perChunk);
       if (!chunkArray[chunkIndex]) {
         chunkArray[chunkIndex] = []; // start a new chunk
