@@ -1,5 +1,6 @@
 import React from 'react';
 import TalksPage from '../components/talksPage/talksPage';
+import style from '../styles/talks.module.scss';
 import Layout from '../components/layout/layout';
 
 export default function Vast() {
