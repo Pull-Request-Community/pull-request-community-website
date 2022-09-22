@@ -5,6 +5,9 @@ const config: PlaywrightTestConfig = {
     command: 'npm run start',
     url: 'http://localhost:3000',
   },
+  use: {
+    trace: 'on',
+  },
 };
 
 export default config;

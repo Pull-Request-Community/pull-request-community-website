@@ -13,3 +13,9 @@ jobs:
         run: npx playwright install --with-deps
       - name: npm run test:e2e
         run: npm run test:e2e
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: playwright-report
+          path: test-results
