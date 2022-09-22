@@ -54,7 +54,7 @@ export function PersonCard({ person }: IPersonProps) {
   const onToggleCard = () => card?.current?.classList.toggle(styles.card__open);
 
   return (
-    <div ref={card} className={styles.card} style={{ borderBottomColor: theme }}>
+    <div ref={card} className={`${styles.card} personCard`} style={{ borderBottomColor: theme }}>
       <div
         className={styles.card__img}
         style={{
