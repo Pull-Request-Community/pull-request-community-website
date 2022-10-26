@@ -61,7 +61,7 @@ $duration: 250ms;
 
   &:hover {
     margin: 0 40px;
-    transform: scale(1.2);
+    transform: scale($itemGrow);
   }
 }
 
