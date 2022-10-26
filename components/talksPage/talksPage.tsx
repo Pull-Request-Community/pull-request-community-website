@@ -27,13 +27,10 @@ function TalksPage() {
   const setVideos = (videos) => {
     // add youtube videos
     const opts = { height: '200', width: '320' };
+    const { sections, index } = videos;
 
-    return videos.sections.map((video, i) => (
-      <div
-        className={style.item}
-        id={'item' + i + '_' + videos.index}
-        key={'item' + i + '_' + videos.index}
-      >
+    return sections.map((video, i) => (
+      <div className={style.item} id={'item' + i + '_' + index} key={'item' + i + '_' + index}>
         <YouTube
           videoId={video.src}
           opts={opts}
@@ -46,8 +43,7 @@ function TalksPage() {
 
   const setSections = (videos) => {
     // organize sections based on categories
-    const chunkVideos = videos.chunkVideos;
-    const index = videos.index;
+    const { chunkVideos, index } = videos;
 
     return chunkVideos.map((sections, i) => (
       <section
@@ -74,10 +70,11 @@ function TalksPage() {
 
   const setCategories = (categoryVideos) => {
     // divide each category's videos into chunks
+    const { videos, index } = categoryVideos;
     const perChunk = 3; // videos per chunk
 
-    const chunkVideos = categoryVideos.videos.reduce((chunkArray, video, index) => {
-      const chunkIndex = Math.floor(index / perChunk);
+    const chunkVideos = videos.reduce((chunkArray, video, i) => {
+      const chunkIndex = Math.floor(i / perChunk);
       if (!chunkArray[chunkIndex]) {
         chunkArray[chunkIndex] = []; // start a new chunk
       }
@@ -85,7 +82,7 @@ function TalksPage() {
       return chunkArray;
     }, []);
 
-    return setSections({ chunkVideos, index: categoryVideos.index });
+    return setSections({ chunkVideos, index });
   };
 
   return (
