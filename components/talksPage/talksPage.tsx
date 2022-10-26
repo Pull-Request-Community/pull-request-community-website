@@ -26,6 +26,7 @@ function TalksPage() {
 
   const onVideoClick = (event) => {
     event.target.pauseVideo(); // stop chosen video
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setSrc(event.target.playerInfo.videoData.video_id); // open the chosen video on the big iframe
   };
 
