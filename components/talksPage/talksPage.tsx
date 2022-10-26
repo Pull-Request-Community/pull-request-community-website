@@ -30,7 +30,7 @@ function TalksPage() {
     const { sections, index } = videos;
 
     return sections.map((video, i) => (
-      <div className={style.item} id={'item' + i + '_' + index} key={'item' + i + '_' + index}>
+      <div className={style.item} id={`item${i}_${index}`} key={`item${i}_${index}`}>
         <YouTube
           videoId={video.src}
           opts={opts}
@@ -48,18 +48,18 @@ function TalksPage() {
     return chunkVideos.map((sections, i) => (
       <section
         className={style.section}
-        id={'section' + (i + 1) + '_' + index}
-        key={'section' + (i + 1) + '_' + index}
+        id={`section${i + 1}_${index}`}
+        key={`section${i + 1}_${index}`}
       >
         <a
-          href={'#section' + calcArrowSide(i + 1, i, chunkVideos.length) + '_' + index}
+          href={`#section${calcArrowSide(i + 1, i, chunkVideos.length)}_${index}`}
           className={style.arrow__btn}
         >
           ‹
         </a>
         {setVideos({ sections, index })}
         <a
-          href={'#section' + calcArrowSide(i + 1, i + 2, chunkVideos.length) + '_' + index}
+          href={`#section${calcArrowSide(i + 1, i + 2, chunkVideos.length)}_${index}`}
           className={style.arrow__btn}
         >
           ›
@@ -90,14 +90,14 @@ function TalksPage() {
       <iframe
         className={style.video}
         height="400"
-        src={'https://www.youtube.com/embed/' + currSrc}
+        src={`https://www.youtube.com/embed/${currSrc}`}
         frameBorder="0"
         allow="autoplay; encrypted-media"
         allowFullScreen
         title="video"
       ></iframe>{' '}
       {talksList.map((category, index) => (
-        <span key={'category' + index}>
+        <span key={`category${index}`}>
           <h1 className={style.title}>{category.title}</h1>
           <div className={style.wrapper}>{setCategories({ videos: category.videos, index })}</div>
         </span>
