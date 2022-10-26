@@ -1,15 +1,15 @@
 .descriptionContainer {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    direction: ltr;
-    width: 60%;
-    margin: 0 auto;
-  }
-  
-  .title {
-    font-weight: 800;
-    font-size: 36px;
-    color: #39475d;
-    line-height: 47px;
-  }
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  direction: ltr;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 2.25rem;
+  color: #39475d;
+  line-height: 47px;
+}
