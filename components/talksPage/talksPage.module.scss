@@ -13,22 +13,6 @@ $duration: 250ms;
   margin: -24px auto 0;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 100%);
-  overflow: hidden;
-  height: 200px;
-  scroll-behavior: smooth;
-}
-
-.section {
-  width: 100%;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  margin: 20px 0;
-}
-
 .iframeContainer {
   position: relative;
   overflow: hidden;
@@ -90,9 +74,32 @@ $duration: 250ms;
   }
 }
 
-// // Remove the arrow for Mobile
-// @media only screen and (max-width: 600px) {
-//   .arrow__btn {
-//     display: none;
-//   }
-// }
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 100%);
+  overflow: hidden;
+  height: 200px;
+  scroll-behavior: smooth;
+}
+
+.section {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  margin: 20px 0;
+}
+
+// Remove the arrow for Mobile
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .section {
+    grid-template-columns: repeat(1, auto);
+  }
+  // .arrow__btn {
+  //   display: none;
+  // }
+}
