@@ -24,11 +24,9 @@ function TalksPage() {
     setSrc(event.target.playerInfo.videoData.video_id); // open the chosen video on the big iframe
   };
 
-  const setVideos = (videos) => { // add youtube videos
-    const opts = {
-      height: '200',
-      width: '320',
-    };
+  const setVideos = (videos) => {
+    // add youtube videos
+    const opts = { height: '200', width: '320' };
 
     return videos.sections.map((video, i) => (
       <div
@@ -36,12 +34,18 @@ function TalksPage() {
         id={'item' + i + '_' + videos.index}
         key={'item' + i + '_' + videos.index}
       >
-        <YouTube videoId={video.src} opts={opts} title={video.title} onPlay={onVideoClick}></YouTube>
+        <YouTube
+          videoId={video.src}
+          opts={opts}
+          title={video.title}
+          onPlay={onVideoClick}
+        ></YouTube>
       </div>
     ));
   };
 
-  const setSections = (videos) => { // organize sections based on categories
+  const setSections = (videos) => {
+    // organize sections based on categories
     const chunkVideos = videos.chunkVideos;
     const index = videos.index;
 
@@ -68,7 +72,8 @@ function TalksPage() {
     ));
   };
 
-  const setCategories = (categoryVideos) => { // divide each category's videos into chunks
+  const setCategories = (categoryVideos) => {
+    // divide each category's videos into chunks
     const perChunk = 3; // videos per chunk
 
     const chunkVideos = categoryVideos.videos.reduce((chunkArray, video, index) => {
