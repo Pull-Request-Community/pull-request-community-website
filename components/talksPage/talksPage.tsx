@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import style from './talksPage.module.scss';
 import talksList from '../../assets/videos.json';
 import YouTube from 'react-youtube';
+import { mobile } from '../../utils/mediaQueries';
 
 function TalksPage() {
+  const isMobile = useMediaQuery({ query: mobile });
+  const videosPerChunk = isMobile ? 1 : 4; // videos per chunk
   const [currSrc, setSrc] = useState('GHbNaDSWUX8');
-  const videosPerChunk = 4; // videos per chunk
   const opts = { height: '200px', width: '320px' };
 
   const calcArrowSide = (curr, side, length) => {
@@ -100,19 +103,18 @@ function TalksPage() {
 
   return (
     <div className={style.talksContainer}>
-      <iframe
-        id="video"
-        className={style.video}
-        height="600"
-        width="1280"
-        src={`https://www.youtube.com/embed/${currSrc}`}
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-        title="video"
-      ></iframe>{' '}
+      <div className={style.iframeContainer}>
+        <iframe
+          className={style.video}
+          src={`https://www.youtube.com/embed/${currSrc}`}
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          title="video"
+        ></iframe>
+      </div>
       {talksList.map((category, index) => (
-        <span key={`category${index}`}>
+        <span className={style.category} key={`category${index}`}>
           <h1 className={style.title}>{category.title}</h1>
           <div className={style.wrapper}>{setCategories({ videos: category.videos, index })}</div>
         </span>
