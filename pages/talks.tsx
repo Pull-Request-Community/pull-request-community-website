@@ -5,7 +5,7 @@ import Layout from '../components/layout/layout';
 import languageFile from '../components/talksPage/talksPage.language.json';
 import { useTranslator } from '../components/language/useTranslator';
 
-export default function Vast() {
+export default function Talks() {
   return (
     <Layout
       descriptionContent={
