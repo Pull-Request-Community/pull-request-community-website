@@ -3,11 +3,18 @@ $duration: 250ms;
 
 .talksContainer {
   display: flex;
-  gap: 20px;
   flex-direction: column;
   direction: ltr;
-  width: 60%;
-  margin: 0 auto;
+
+  gap: 30px 45px;
+  justify-items: center;
+  margin-bottom: 100px;
+  max-width: 1280px;
+  margin: -60px auto 0;
+}
+
+iframe#video {
+  align-self: center;
 }
 
 .wrapper {

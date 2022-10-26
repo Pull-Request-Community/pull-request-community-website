@@ -5,8 +5,8 @@ import YouTube from 'react-youtube';
 
 function TalksPage() {
   const [currSrc, setSrc] = useState('GHbNaDSWUX8');
-  const perChunk = 3; // videos per chunk
-  const opts = { height: '200', width: '320' };
+  const videosPerChunk = 4; // videos per chunk
+  const opts = { height: '200px', width: '320px' };
 
   const calcArrowSide = (curr, side, length) => {
     if (side > curr) {
@@ -29,8 +29,7 @@ function TalksPage() {
   const setVideos = (videos) => {
     // add youtube videos
     const { sections, index } = videos;
-
-    return sections.map((video, i) => (
+    const youtubeVideos = sections.map((video, i) => (
       <div className={style.item} id={`item${i}_${index}`} key={`item${i}_${index}`}>
         <YouTube
           videoId={video.src}
@@ -40,6 +39,20 @@ function TalksPage() {
         ></YouTube>
       </div>
     ));
+    // add empty divs to fill section
+    if (sections.length < videosPerChunk) {
+      for (let i = sections.length; i < videosPerChunk; i++) {
+        youtubeVideos.push(
+          <div
+            className={style.item}
+            id={`item${i}_${index}`}
+            key={`item${i}_${index}`}
+            style={opts}
+          ></div>
+        );
+      }
+    }
+    return youtubeVideos;
   };
 
   const setSections = (videos) => {
@@ -74,7 +87,7 @@ function TalksPage() {
     const { videos, index } = categoryVideos;
 
     const chunkVideos = videos.reduce((chunkArray, video, i) => {
-      const chunkIndex = Math.floor(i / perChunk);
+      const chunkIndex = Math.floor(i / videosPerChunk);
       if (!chunkArray[chunkIndex]) {
         chunkArray[chunkIndex] = []; // start a new chunk
       }
@@ -90,8 +103,8 @@ function TalksPage() {
       <iframe
         id="video"
         className={style.video}
-        height="315"
-        width="560"
+        height="600"
+        width="1280"
         src={`https://www.youtube.com/embed/${currSrc}`}
         frameBorder="0"
         allow="autoplay; encrypted-media"
