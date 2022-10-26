@@ -5,6 +5,8 @@ import YouTube from 'react-youtube';
 
 function TalksPage() {
   const [currSrc, setSrc] = useState('GHbNaDSWUX8');
+  const perChunk = 3; // videos per chunk
+  const opts = { height: '200', width: '320' };
 
   const calcArrowSide = (curr, side, length) => {
     if (side > curr) {
@@ -26,7 +28,6 @@ function TalksPage() {
 
   const setVideos = (videos) => {
     // add youtube videos
-    const opts = { height: '200', width: '320' };
     const { sections, index } = videos;
 
     return sections.map((video, i) => (
@@ -71,7 +72,6 @@ function TalksPage() {
   const setCategories = (categoryVideos) => {
     // divide each category's videos into chunks
     const { videos, index } = categoryVideos;
-    const perChunk = 3; // videos per chunk
 
     const chunkVideos = videos.reduce((chunkArray, video, i) => {
       const chunkIndex = Math.floor(i / perChunk);
@@ -88,8 +88,10 @@ function TalksPage() {
   return (
     <div className={style.talksContainer}>
       <iframe
+        id="video"
         className={style.video}
-        height="400"
+        height="315"
+        width="560"
         src={`https://www.youtube.com/embed/${currSrc}`}
         frameBorder="0"
         allow="autoplay; encrypted-media"
