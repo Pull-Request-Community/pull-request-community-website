@@ -1,0 +1,31 @@
+$blue-100: #7289da;
+$blue-200: #1778f2;
+$blue-300: #0088cc;
+$blue-500: #0b008e;
+$red-200: #ce5a55;
+$gray-100: #e8e8e8;
+$gray-200: #e2e2e2;
+$gray-400: #808080;
+$gray-500: #353535;
+$gray-600: #292e33;
+$gray-700: #242831;
+$gray-800: #202529;
+$gray-900: #1d1d1d;
+// New colors.
+$blue-600: #01007d;
+$new-gray-100: #fafafb;
+$new-gray-200: #e9ebef;
+$new-gray-300: #bfc0c3;
+$new-gray-400: #5b6375;
+$new-gray-500: #39475d;
+$new-gray-600: #242831;
+$purple-500: #832ec6;
+$purple-red-500: linear-gradient(180deg, #01007d 0%, #832ec6 47.92%, #dc665e 100%);
+$purple-red-400: linear-gradient(
+  180deg,
+  rgba(1, 0, 125, 0.6) 0%,
+  rgba(131, 46, 198, 0.6) 47.92%,
+  rgba(220, 102, 94, 0.6) 100%
+);
+$purple-100: rgba(11, 0, 142, 0.3);
+$purple-200: rgba(11, 0, 142, 0.1);

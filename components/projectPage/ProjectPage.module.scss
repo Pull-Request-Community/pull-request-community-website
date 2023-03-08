@@ -1,3 +1,5 @@
+@import "../../styles/colors";
+
 .descriptionContainer {
   display: flex;
   flex-direction: column;
@@ -10,7 +12,7 @@
   justify-content: center;
   font-weight: bold;
   font-size: 36px;
-  color: #0b008e;
+  color: $blue-500;
 }
 
 .star {
@@ -60,6 +62,6 @@
   }
 
   .description {
-    font-size: 1.556rem; // Based on 9px.
+    font-size: 1rem; // Based on 16px.
   }
 }

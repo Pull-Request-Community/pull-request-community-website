@@ -1,4 +1,5 @@
 import { useMemo, useRef } from 'react';
+import classNames from 'classnames';
 import {
   mdiFacebook,
   mdiGithub,
@@ -11,7 +12,6 @@ import {
 import Icon from '@mdi/react';
 import { IPerson } from '../../services/people';
 import styles from './personCard.module.scss';
-import colors from '../../styles/colors';
 import ShowMore from '../showMore/showMore';
 import Label from '../label/label';
 
@@ -35,7 +35,6 @@ export function PersonCard({ person }: IPersonProps) {
     roles,
     customImage,
   } = person;
-  const theme = useMemo(() => themeColor ?? colors.secondary_color, [themeColor]);
   const icons = useMemo(
     () => [
       { link: github, icon: mdiGithub },
@@ -54,7 +53,12 @@ export function PersonCard({ person }: IPersonProps) {
   const onToggleCard = () => card?.current?.classList.toggle(styles.card__open);
 
   return (
-    <div ref={card} className={styles.card} style={{ borderBottomColor: theme }}>
+    <div
+      ref={card}
+      className={classNames(styles.card, {
+        [`${styles.card_default_theme}`]: !themeColor,
+      })}
+    >
       <div
         className={styles.card__img}
         style={{
@@ -94,7 +98,12 @@ export function PersonCard({ person }: IPersonProps) {
                   href={link.startsWith('https://') ? link : `https://github.com/${link}`}
                   rel="noreferrer"
                 >
-                  <Icon className="icon" path={icon} style={{ color: theme }} />
+                  <Icon
+                    className={classNames({
+                      [`${styles.icon_default_theme}`]: !themeColor,
+                    })}
+                    path={icon}
+                  />
                 </a>
               )
           )}

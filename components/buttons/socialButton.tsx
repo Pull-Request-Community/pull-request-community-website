@@ -1,51 +1,9 @@
-import colors from '../../styles/colors';
+import styles from './button.module.scss';
 
 const SocialButton = ({ children, className }: BasicButtonProps) => {
   return (
     <>
-      <button className={`${className} SocialButton`}>{children}</button>
-      <style jsx>{`
-        .SocialButton {
-          user-select: none;
-          cursor: pointer;
-          color: white;
-          font-size: 1.5rem;
-          border: none;
-          border-radius: 100%;
-          padding: 10px 0;
-          transition: background-color 0.3s cubic-bezier(0.4, 0, 1, 1);
-          max-height: 36px;
-          max-width: 36px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-        }
-        .telegram {
-          background-color: ${colors.telegram};
-        }
-        .facebook {
-          background-color: ${colors.facebook};
-        }
-        .discord {
-          background-color: ${colors.discord};
-        }
-        .newsletter {
-          background-color: ${colors.newsletter};
-        }
-
-        .SocialButton:hover {
-          filter: brightness(1.2);
-        }
-        @media only screen and (max-width: 600px) {
-          .SocialButton {
-            max-height: 48px;
-            max-width: 48px;
-          }
-        }
-      `}</style>
+      <button className={`${styles[className]} ${styles.socialButton}`}>{children}</button>
     </>
   );
 };

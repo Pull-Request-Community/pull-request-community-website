@@ -1,4 +1,5 @@
 @import "./typography.scss";
+@import "../styles/colors";
 
 * {
   box-sizing: border-box;
@@ -25,19 +26,19 @@ html {
 }
 
 html {
-  --primary: #ce5a55;
-  --background-color: #e8e8e8;
+  --primary: #{$red-200};
+  --background-color: #{$gray-100};
   --background-description: white;
   --card-background: white;
-  --header-background: #242831;
-  --text: #1d1d1d;
+  --header-background: #{$gray-700};
+  --text: #{$gray-900};
 }
 
 html.dark {
-  --primary: #ce5a55;
-  --background-color: #353535;
-  --background-description: #202529;
-  --card-background: #292e33;
-  --header-background: #000;
-  --text: #e8e8e8;
+  --primary: #{$red-200};
+  --background-color: #{$gray-500};
+  --background-description: #{$gray-800};
+  --card-background: #{$gray-600};
+  --header-background: black;
+  --text: #{$gray-100};
 }
