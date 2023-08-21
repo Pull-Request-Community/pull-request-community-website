@@ -6,16 +6,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+          node-version: 16
+
       - name: install dependencies
         run: npm ci
+
       - name: install playwright browsers
         run: npx playwright install --with-deps
+
       - name: npm run test:e2e
         run: npm run test:e2e
+
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: playwright-report
           path: test-results
