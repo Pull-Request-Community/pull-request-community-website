@@ -5,13 +5,13 @@ jobs:
     name: Validate JSON Schemas
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Validate People JSON schema
-        uses: snapcart/json-schema-validator@v1.0.0
+        uses: GrantBirki/json-yaml-validate@v2.3.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           json_schema: ./schemas/people-schema.json
-          json_path_pattern: ^people/.+\.json$
+          base_dir: './people'
+
   eslint:
     name: ESLint
     runs-on: ubuntu-latest
